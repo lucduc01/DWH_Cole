@@ -14,7 +14,7 @@ def get_quarter(month):
     return (month - 1) // 3 + 1
 
 # Tạo dữ liệu cho bảng Dim_Thoi_gian
-start_date = datetime(2019, 1, 1)
+start_date = datetime(2014, 1, 1)
 end_date = datetime(2040, 12, 31)
 current_date = start_date
 

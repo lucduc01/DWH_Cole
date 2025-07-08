@@ -6,15 +6,13 @@ from src.SCD1 import SCDType1Sync
 transformer = DataTransformer()
 
 # Lấy dữ liệu đã xử lý
-df_src=pd.read_csv('~/DWH_Cole_Project/data_result/classify_transformed.csv')
+df_src=pd.read_csv('~/DWH_Cole_Project/data_result/class_transformed.csv')
 
 # Lấy dữ liệu từ Dim 
-sql_query = "select * from Dim_Phan_loai"
+sql_query = "select * from Dim_Lop_hoc"
 df_des = transformer.fetch_from_sql_server(sql_query)
 
 # Đồng bộ dữ liệu 
-syncer = SCDType1Sync(df_src, df_des, key_column='Ma_phan_loai',table_name="Dim_Phan_loai")
+syncer = SCDType1Sync(df_src, df_des, key_column='Ma_lop_hoc',table_name="Dim_Lop_hoc")
 syncer.sync()
-
-
 

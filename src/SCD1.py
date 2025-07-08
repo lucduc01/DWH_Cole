@@ -20,6 +20,9 @@ class SCDType1Sync:
         self.table_name = table_name
 
     def _get_updates(self):
+        if not self.compare_columns:
+            return pd.DataFrame(columns=[self.key_column])
+
         df_merge = pd.merge(
             self.df_source,
             self.df_target,
@@ -27,9 +30,13 @@ class SCDType1Sync:
             how='inner',
             suffixes=('_src', '_tgt')
         )
-        cond = False
+
+        # Tạo Series False để bắt đầu (phải cùng index với df_merge)
+        cond = pd.Series([False] * len(df_merge), index=df_merge.index)
+
         for col in self.compare_columns:
             cond |= (df_merge[f'{col}_src'] != df_merge[f'{col}_tgt'])
+
         return df_merge[cond][[self.key_column] + [f'{col}_src' for col in self.compare_columns]]
 
     def _get_inserts(self):
@@ -41,9 +48,12 @@ class SCDType1Sync:
         return self.df_target[~self.df_target[self.key_column].isin(ids_source)]
 
     def sync(self):
+        
         if self.df_target.empty:
+           
             # Nếu bảng đích trống → INSERT toàn bộ
             for _, row in self.df_source.iterrows():
+          
                 cols = ', '.join(self.df_source.columns)
                 placeholders = ', '.join(['?'] * len(row))
                 sql = f"INSERT INTO {self.table_name} ({cols}) VALUES ({placeholders})"
@@ -52,15 +62,20 @@ class SCDType1Sync:
             return
 
         # Cập nhật
-        updates = self._get_updates()
-        for _, row in updates.iterrows():
-            set_clause = ', '.join([f"{col} = ?" for col in self.compare_columns])
-            sql = f"UPDATE {self.table_name} SET {set_clause} WHERE {self.key_column} = ?"
-            params = [row[f'{col}_src'] for col in self.compare_columns] + [row[self.key_column]]
-            self.sql_server_cursor.execute(sql, params)
+        # Cập nhật (nếu có compare_columns)
+        if self.compare_columns:
+            
+            updates = self._get_updates()
+            for _, row in updates.iterrows():
+                set_clause = ', '.join([f"{col} = ?" for col in self.compare_columns])
+                sql = f"UPDATE {self.table_name} SET {set_clause} WHERE {self.key_column} = ?"
+                params = [row[f'{col}_src'] for col in self.compare_columns] + [row[self.key_column]]
+                self.sql_server_cursor.execute(sql, params)
+
 
         # Thêm mới
         inserts = self._get_inserts()
+        
         for _, row in inserts.iterrows():
             cols = ', '.join(inserts.columns)
             placeholders = ', '.join(['?'] * len(row))
@@ -69,6 +84,7 @@ class SCDType1Sync:
 
         # Xoá
         deletes = self._get_deletes()
+
         for _, row in deletes.iterrows():
             sql = f"DELETE FROM {self.table_name} WHERE {self.key_column} = ?"
             self.sql_server_cursor.execute(sql, (row[self.key_column],))

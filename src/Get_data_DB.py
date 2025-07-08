@@ -11,9 +11,10 @@ class DataTransformer:
     def fetch_from_mysql(self, query):
         """Thực thi query từ MySQL và trả về DataFrame."""
         try:
-            self.mysql_cursor.execute(query)
-            columns = [desc[0] for desc in self.mysql_cursor.description]
-            data = self.mysql_cursor.fetchall()
+            with self.mysql_conn.cursor() as cursor:
+                cursor.execute(query)
+                columns = [desc[0] for desc in cursor.description]
+                data = cursor.fetchall()
             return pd.DataFrame(data, columns=columns)
         except Exception as e:
             print(f"Error fetching from MySQL: {e}")

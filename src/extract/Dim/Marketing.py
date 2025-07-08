@@ -3,6 +3,8 @@ from src.Get_data_DB import DataTransformer
 transformer = DataTransformer()
 
 # Lấy dữ liệu mã phân loại trong bảng products Mysql
-mysql_query = "select classify from products "
+mysql_query= """select utm_medium 
+                 from leads
+                 """
 df = transformer.fetch_from_mysql(mysql_query)
-df.to_csv("~/DWH_Cole_Project/data_tmp/classify.csv",index=False)
+df.to_csv("~/DWH_Cole_Project/data_tmp/marketing.csv",index=False)

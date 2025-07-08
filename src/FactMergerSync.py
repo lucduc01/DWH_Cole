@@ -1,7 +1,9 @@
 import pandas as pd
-from sqlalchemy import create_engine
-from dateutil.relativedelta import relativedelta
+from sqlalchemy import create_engine, text
 from typing import Optional
+from dotenv import load_dotenv
+from urllib.parse import quote_plus
+import os
 
 class FactMergerSync:
     def __init__(
@@ -9,44 +11,44 @@ class FactMergerSync:
         df_source: pd.DataFrame,
         table_name: str,
         key_column: str,
-        engine,
         temp_table_name: str = "temp_fact_sync",
-        filter_column: Optional[str] = None
+        env_file: str = ".env"
     ):
         """
-        df_source: pandas DataFrame cần đồng bộ
+        df_source: DataFrame cần đồng bộ (đã được lọc 3 tháng gần nhất)
         table_name: tên bảng đích trong SQL Server
-        key_column: tên cột khoá chính (vd: 'id')
-        engine: SQLAlchemy engine kết nối SQL Server
-        temp_table_name: tên bảng tạm (tạm thời ghi dữ liệu từ pandas)
-        filter_column: cột thời gian để tự động lọc 3 tháng gần nhất (vd: 'Ngày chuyển tiền')
+        key_column: tên cột khóa chính
+        env_file: đường dẫn đến file .env chứa thông tin kết nối
         """
         self.df_source = df_source.copy()
         self.table_name = table_name
         self.key_column = key_column
-        self.engine = engine
         self.temp_table_name = temp_table_name
-        self.filter_column = filter_column
-
-        # Xác định các cột cần so sánh (trừ key)
         self.compare_columns = [col for col in self.df_source.columns if col != key_column]
 
-    def _filter_last_3_months(self):
-        """Tự động lọc dữ liệu 3 tháng gần nhất theo filter_column"""
-        if not self.filter_column or self.filter_column not in self.df_source.columns:
-            return
+        # Load biến môi trường từ file .env
+        load_dotenv(dotenv_path=env_file)
+        host = os.getenv("Host_DWH")
+        port = os.getenv("Port_DWH", "1433")
+        user = os.getenv("User_DWH")
+        password = os.getenv("Pass_DWH")
+        database = os.getenv("Db_DWH")
+        driver = "ODBC Driver 17 for SQL Server"
 
-        self.df_source[self.filter_column] = pd.to_datetime(self.df_source[self.filter_column])
-        max_date = self.df_source[self.filter_column].max()
-        min_date = max_date - relativedelta(months=3)
-
-        self.df_source = self.df_source[
-            (self.df_source[self.filter_column] >= min_date) &
-            (self.df_source[self.filter_column] <= max_date)
-        ]
+        # Tạo connection string
+        params = quote_plus(
+            f"DRIVER={driver};"
+            f"SERVER={host},{port};"
+            f"DATABASE={database};"
+            f"UID={user};"
+            f"PWD={password};"
+            f"TrustServerCertificate=yes;"
+            f"Connection Timeout=60;"
+        )
+        connection_string = f"mssql+pyodbc:///?odbc_connect={params}"
+        self.engine = create_engine(connection_string, fast_executemany=True)
 
     def _upload_temp_table(self):
-        """Ghi df_source lên SQL Server (bảng tạm)"""
         self.df_source.to_sql(
             name=self.temp_table_name,
             con=self.engine,
@@ -55,17 +57,14 @@ class FactMergerSync:
         )
 
     def _generate_merge_sql(self):
-        """Sinh câu lệnh MERGE SQL"""
         set_clause = ', '.join([f"target.[{col}] = source.[{col}]" for col in self.compare_columns])
         insert_columns = ', '.join([f"[{col}]" for col in self.df_source.columns])
         insert_values = ', '.join([f"source.[{col}]" for col in self.df_source.columns])
         match_condition = f"target.[{self.key_column}] = source.[{self.key_column}]"
-
         compare_cond = ' OR '.join([
             f"ISNULL(target.[{col}], '') <> ISNULL(source.[{col}], '')" for col in self.compare_columns
         ])
-
-        sql = f"""
+        return f"""
         MERGE {self.table_name} AS target
         USING {self.temp_table_name} AS source
         ON {match_condition}
@@ -75,21 +74,13 @@ class FactMergerSync:
             INSERT ({insert_columns})
             VALUES ({insert_values});
         """
-        return sql
 
     def sync(self):
-        """Thực hiện đồng bộ bằng MERGE SQL"""
-        self._filter_last_3_months()
-
         if self.df_source.empty:
-            print("Không có dữ liệu để đồng bộ.")
+            print("⚠️ Không có dữ liệu để đồng bộ.")
             return
-
         self._upload_temp_table()
-
         merge_sql = self._generate_merge_sql()
-
         with self.engine.begin() as conn:
-            conn.execute(merge_sql)
-
+            conn.execute(text(merge_sql))
         print("✅ Đồng bộ thành công bằng MERGE SQL.")

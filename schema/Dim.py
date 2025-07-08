@@ -23,6 +23,7 @@ CREATE TABLE Dim_Khoa_hoc (
     Ma_khoa_hoc int PRIMARY KEY,
     Ten_khoa_hoc nvarchar(50),
     Ma_phan_loai nvarchar(20),
+    Trang_thai int,
     FOREIGN KEY (Ma_phan_loai) REFERENCES Dim_Phan_loai(Ma_phan_loai)
 );
 """
@@ -45,7 +46,8 @@ create_dim_saler = """
 CREATE TABLE Dim_Saler (
     Ma_nhan_vien int PRIMARY KEY,
     Ten_nhan_vien nvarchar(50),
-    Ten_he_thong nvarchar(50)
+    Ten_he_thong nvarchar(50),
+    Trang_thai int
 );
 """
 
@@ -62,6 +64,12 @@ CREATE TABLE Dim_Utm_kenh (
 );
 """
 
+create_dim_nguon_marketing = """
+CREATE TABLE Dim_Marketing(
+    Nguon_marketing nvarchar(50) PRIMARY KEY
+);
+"""
+
 # Execute SQL commands on SQL Server
 sql_server_cursor.execute(create_dim_thoi_gian)
 sql_server_cursor.execute(create_dim_phan_loai)
@@ -70,6 +78,7 @@ sql_server_cursor.execute(create_dim_lop_hoc)
 sql_server_cursor.execute(create_dim_saler)
 sql_server_cursor.execute(create_dim_kenh)
 sql_server_cursor.execute(create_dim_utm_kenh)
+sql_server_cursor.execute(create_dim_nguon_marketing)
 
 # Commit the transaction
 sql_server_conn.commit()
