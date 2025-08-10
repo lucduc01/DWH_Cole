@@ -4,7 +4,6 @@ import re
 # Đọc dữ liệu
 df=pd.read_csv("~/DWH_Cole_Project/data_tmp/class.csv")
 
-
 #Chuẩn hoá dữ liệu
 def normalize_data(item):
     # Bước 1: Xóa khoảng trắng
@@ -20,7 +19,7 @@ def normalize_data(item):
     # Chuyển .K thành -K
     item = re.sub(r'\.K', '-K', item)
     # Chèn - vào giữa chữ cái và K (nếu trước K là chữ cái)
-    item = re.sub(r'([a-zA-Z])K', r'\1-K', item)
+    item = re.sub(r'([a-zA-Z])K(?=\d)', r'\1-K', item)
     
     # Bước 5: Chuyển MODUL thành MODULE
     item = re.sub(r'MODUL(?![E])', 'MODULE', item, flags=re.IGNORECASE)
@@ -59,22 +58,31 @@ def split_ten_lop_so_thu_tu(item):
     return pd.Series([ten_lop, so_thu_tu])
 
 def calculate_so_ngay_tuyen_sinh(group):
-    group = group.sort_values('So_thu_tu')  # Sắp xếp theo So_thu_tu trong nhóm
-    so_ngay_tuyen_sinh = [0]  # Gán 0 cho dòng đầu tiên
+    if len(group) == 1:
+        group['So_buoi_tuyen_sinh'] = 0
+        return group
+
+    # Sắp xếp
+    if group['Ngay_khai_giang'].isna().any():
+        group = group.sort_values('So_thu_tu')
+    else:
+        group = group.sort_values('Ngay_khai_giang')
+
+    # Reset index để xử lý dễ hơn (nhưng vẫn giữ lại thứ tự gốc)
+    group = group.reset_index(drop=True)
+
+    so_ngay_tuyen_sinh = [1]
     for i in range(1, len(group)):
-        prev_date = group['Ngay_khai_giang'].iloc[i-1]
+        prev_date = group['Ngay_khai_giang'].iloc[i - 1]
         curr_date = group['Ngay_khai_giang'].iloc[i]
-        # Nếu có Null trong phép trừ, gán 0
         if pd.isna(prev_date) or pd.isna(curr_date):
-            so_ngay_tuyen_sinh.append(0)
+            so_ngay_tuyen_sinh.append(-1)
         else:
             so_ngay_tuyen_sinh.append((curr_date - prev_date).days)
-    # Gán 1 cho So_thu_tu = 1
-    for i in range(len(group)):
-        if group['So_thu_tu'].iloc[i] == 1:
-            so_ngay_tuyen_sinh[i] = 1
     group['So_buoi_tuyen_sinh'] = so_ngay_tuyen_sinh
+
     return group
+
 
 df['Ngay_khai_giang'] = pd.to_datetime(df['Ngay_khai_giang'])
 df['Ngay_ket_thuc'] = pd.to_datetime(df['Ngay_ket_thuc'])
@@ -84,9 +92,9 @@ df['Ten_lop_hoc'] = df['Ten_lop_hoc'].apply(normalize_data)
 df[['Ten_lop', 'So_thu_tu']] = df['Ten_lop_hoc'].apply(split_ten_lop_so_thu_tu)
 
 # Nhóm theo Ten_lop và áp dụng hàm calculate_so_ngay_tuyen_sinh
-df = df.groupby('Ten_lop', group_keys=False).apply(calculate_so_ngay_tuyen_sinh)
+df = df.groupby('Ma_khoa_hoc', group_keys=False).apply(calculate_so_ngay_tuyen_sinh)
 
 df=df[["Ma_lop_hoc","Ten_lop_hoc","Ngay_khai_giang","Ngay_ket_thuc","So_buoi_tuyen_sinh","So_buoi_hoc","Trang_thai","Ma_khoa_hoc"]]
-df['Ngay_khai_giang'] = pd.to_datetime(df['Ngay_khai_giang']).fillna(pd.to_datetime('2020-01-01'))
-df['Ngay_ket_thuc'] = pd.to_datetime(df['Ngay_ket_thuc']).fillna(pd.to_datetime('2020-01-01'))
+df['Ngay_khai_giang'] = pd.to_datetime(df['Ngay_khai_giang']).fillna(pd.to_datetime('1999-01-01'))
+df['Ngay_ket_thuc'] = pd.to_datetime(df['Ngay_ket_thuc']).fillna(pd.to_datetime('1999-01-01'))
 df.to_csv("~/DWH_Cole_Project/data_result/class_transformed.csv", index=False)

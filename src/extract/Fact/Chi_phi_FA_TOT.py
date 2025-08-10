@@ -38,6 +38,7 @@ def fetch_campaign_spend(campaign_id, access_token, start_date, end_date):
         "time_range": f'{{"since":"{start_date}", "until":"{end_date}"}}',
         "time_increment": 1,
         "limit": 100
+     
     }
 
     res = requests.get(url, params=params)

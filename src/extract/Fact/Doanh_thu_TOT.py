@@ -3,7 +3,7 @@ from datetime import datetime
 # Tạo instance của class
 transformer = DataTransformer()
 
-# Lấy dữ liệu lần đầu từ năm 2024 Mysql
+# Lấy dữ liệu lần đầu từ năm 2024 Mysql DATE_SUB(NOW(), INTERVAL 3 MONTH)
 mysql_query = f"""
     SELECT 
         tp.id AS Id,
@@ -21,7 +21,7 @@ mysql_query = f"""
     JOIN leads l ON o.lead_id = l.id
     join users u on o.current_sale_id=u.id
     WHERE t.t_status = 1
-      AND t.payment_at >= 'DATE_SUB(NOW(), INTERVAL 3 MONTH)'
+      AND DATE_ADD(t.payment_at, INTERVAL 7 HOUR) >= '2024-01-01'
       And u.role=3
     GROUP BY tp.id, Ma_khoa_hoc, Ma_saler, Ma_marketer, Ma_kenh
 """

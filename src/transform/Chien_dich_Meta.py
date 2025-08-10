@@ -12,7 +12,9 @@ os.makedirs(output_dir, exist_ok=True)
 account_files = {
     "C9": "campaigns_C9.csv",
     "Mkt": "campaigns_Mkt.csv",
-    "Cole8": "campaigns_Cole8.csv"
+    "Cole8": "campaigns_Cole8.csv",
+    "Branding": "campaigns_Branding.csv",
+    "CTV": "campaigns_CTV.csv"
 }
 
 all_data = []

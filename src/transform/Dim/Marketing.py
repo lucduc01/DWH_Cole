@@ -2,7 +2,7 @@ import pandas as pd
 from src.Process_utm import ColumnStandardizer
 standardizer = ColumnStandardizer(
     threshold=80,
-    preserve_if_low_similarity=['QuanNV']
+    preserve_if_low_similarity=['QuanNV','ToUyen','DangHang','HuyenTrang']
 )
 
 df=pd.read_csv("~/DWH_Cole_Project/data_tmp/marketing.csv")

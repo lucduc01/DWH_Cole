@@ -1,6 +1,6 @@
 import pandas as pd
 
-df=pd.read_csv("~/DWH_Cole_Project/data_tmp/classify.csv")
+df=pd.read_csv("~/DWH_Cole_Project/data_result/product_transformed.csv")
 # 1. Thay thế giá trị NaN thành "Cole chưa điền"
 df= df.fillna("Cole chưa điền")
 

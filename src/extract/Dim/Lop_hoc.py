@@ -12,7 +12,7 @@ mysql_query = """select oc.id Ma_lop_hoc,
                         p.id Ma_khoa_hoc
                 from offline_classes oc 
                 join items i on oc.item_id =i.id
-                join products p on i.unique_code =p.unique_code
+                join products p on p.unique_code=i.unique_code  
                 """
 df = transformer.fetch_from_mysql(mysql_query)
 df.to_csv("~/DWH_Cole_Project/data_tmp/class.csv",index=False)

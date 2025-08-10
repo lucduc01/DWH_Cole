@@ -23,9 +23,10 @@ class ColumnStandardizer:
     def _load_standard_usernames(self):
         """Truy vấn danh sách user_name từ bảng users."""
         query = """
-            SELECT user_name 
-            FROM users 
-            WHERE locked = 0 AND role = 2
+            SELECT user_name
+            FROM users
+            WHERE (role = 2 AND locked = 0)
+                OR name IN ('Bình Ngô', 'Hiền Phạm');
         """
         df_users = self.transformer.fetch_from_mysql(query)
         df_users['user_name_clean'] = df_users['user_name'].str.lower()

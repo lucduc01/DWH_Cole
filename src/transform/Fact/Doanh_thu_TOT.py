@@ -2,11 +2,11 @@ import pandas as pd
 from src.Process_utm import ColumnStandardizer
 
 df=pd.read_csv("~/DWH_Cole_Project/data_tmp/Doanh_thu_TOT.csv")
-df_saler=pd.read_csv("~/DWH_Cole_Project/data_result/saler_transformed.csv")
+
 # Chuẩn hoá dữ liệu
 standardizer = ColumnStandardizer(
     threshold=75,
-    preserve_if_low_similarity=['QuanNV']
+    preserve_if_low_similarity=['QuanNV','ToUyen','DangHang','HuyenTrang']
 )
 
 

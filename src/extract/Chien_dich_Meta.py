@@ -27,6 +27,16 @@ ACCOUNTS = [
         "name": "Cole8",
         "ad_account_id": os.getenv("Cole8"),
         "access_token": os.getenv("BM_token")
+    },
+    {
+        "name": "Branding",
+        "ad_account_id": os.getenv("Branding"),
+        "access_token": os.getenv("Cole_token")
+    },
+    {
+        "name": "CTV",
+        "ad_account_id": os.getenv("CTV"),
+        "access_token": os.getenv("Cole_token")
     }
 ]
 
@@ -39,6 +49,7 @@ def get_campaigns(ad_account_id, access_token):
         "access_token": access_token,
         "fields": "id,name,start_time,status,effective_status",
         "limit": 100
+    
     }
 
     campaigns = []

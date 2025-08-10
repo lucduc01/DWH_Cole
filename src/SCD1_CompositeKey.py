@@ -40,6 +40,7 @@ class SCDType1SyncMultipleKey:
 
     def apply_insert(self, inserts: pd.DataFrame):
         for _, row in inserts.iterrows():
+
             cols = ', '.join(inserts.columns)
             placeholders = ', '.join(['?'] * len(row))
             sql = f"INSERT INTO {self.table_name} ({cols}) VALUES ({placeholders})"
@@ -56,7 +57,7 @@ class SCDType1SyncMultipleKey:
     def sync(self):
         # Nếu bảng đích trống, chèn toàn bộ
         if self.df_target.empty:
-           
+          
             self.apply_insert(self.df_source)
         else:
             updates = self.get_updates()
