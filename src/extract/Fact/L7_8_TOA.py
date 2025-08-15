@@ -18,7 +18,7 @@ mysql_query = """SELECT  soh.sale_order_level_id Level_Id,
                 where soh.sale_order_level_id in (16,19)
                 and oc.open_at is not null
                 and u.role=3
-                and date(oc.open_at) >= '2024-01-01'
+                and date(oc.open_at) >= DATE_SUB(NOW(), INTERVAL 3 MONTH)
                 group by Ngay_mo_lop ,Ma_lop_hoc , Ma_kenh , Ma_marketer ,Ma_saler ,Level_Id
                     """
 df = transformer.fetch_from_mysql(mysql_query)

@@ -21,7 +21,7 @@ mysql_query = """select s.id as Id,
                 join offline_classes o2 on s.offline_class_id =o2.id
                 WHERE u.role=3
                 and o2.open_at is not null
-                and date(o2.open_at) >= '2024-01-01'
+                and date(o2.open_at) >= DATE_SUB(NOW(), INTERVAL 3 MONTH)
                 group by Id, Ngay_mo_lop ,Doanh_so ,Ten_hoc_sinh ,Ma_lop_hoc,Ten_san_pham,Ma_saler ,Ma_marketer, Ma_kenh
                     """
 df = transformer.fetch_from_mysql(mysql_query)

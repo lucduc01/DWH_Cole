@@ -25,7 +25,7 @@ mysql_query = f"""
                 WHERE   t.t_status = 1
                     And u.role=3
                     and o2.open_at is not null
-                    and date(o2.open_at) >= '2024-01-01'
+                    and date(o2.open_at) >= DATE_SUB(NOW(), INTERVAL 3 MONTH)
                 group by Id, Ngay_mo_lop ,Doanh_thu ,Ten_hoc_sinh ,Ma_lop_hoc,Ten_san_pham,Ma_saler ,Ma_marketer, Ma_kenh
 """
 df = transformer.fetch_from_mysql(mysql_query)

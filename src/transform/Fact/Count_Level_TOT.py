@@ -21,6 +21,6 @@ df = df.groupby(['Ngay', 'Ma_kenh', 'Ma_marketer', 'Ma_khoa_hoc', 'Ma_saler']).a
     L7=('L7', 'sum'),
     L8=('L8', 'sum')
 ).reset_index()
-df['Ngay'] = pd.to_datetime(df['Ngay'])
 
+df['Ngay'] = pd.to_datetime(df['Ngay'])
 df.to_csv("~/DWH_Cole_Project/data_result/Count_Level_TOT_transformed.csv", index=False)

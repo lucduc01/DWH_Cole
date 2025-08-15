@@ -18,7 +18,7 @@ paused_campaign_query = """
            Ngay_bat_dau
     FROM Chien_dich_Meta
     WHERE Account  = 'CTV'
-     AND Trang_thai in ('ACTIVE','PAUSED')
+     AND Trang_thai ='ACTIVE'
 """
 df = transformer.fetch_from_sql_server(paused_campaign_query)
 

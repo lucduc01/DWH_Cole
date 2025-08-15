@@ -23,7 +23,7 @@ mysql_query = """SELECT DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) AS Ngay,
                 JOIN sale_order_histories s1 ON s1.order_id = o.id AND s1.sale_order_level_id = 1
                 JOIN sale_order_histories s2 ON s2.order_id = o.id 
                 WHERE l.status = 1 
-                AND DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) >= '2024-01-01'
+                AND DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) >= DATE_SUB(NOW(), INTERVAL 3 MONTH)
                 AND u.role = 3 
                 GROUP BY Ngay, Ma_kenh, Ma_marketer, Ma_khoa_hoc, Ma_saler
                     """

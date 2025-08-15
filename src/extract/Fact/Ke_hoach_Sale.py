@@ -52,9 +52,9 @@ def read_public_google_sheet_2(sheet_url):
 
         # Gán dòng thứ 2 (index=1) làm tên cột
         df = raw_df.iloc[2:].copy()
-        df.columns = raw_df.iloc[1]
+        df.columns = raw_df.iloc[0]
 
-        print("✅ Đọc Sheet 2 thành công (dòng 2 làm header).")
+        print("✅ Đọc Sheet 2 thành công (dòng 1 làm header).")
         return df
 
     except Exception as e:
