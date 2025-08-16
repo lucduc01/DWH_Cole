@@ -1,0 +1,87 @@
+
+
+[ERROR - 2025-08-16 15:09:50.742723]
+Error message: 'Engine' object has no attribute 'cursor'
+Stack trace:
+Traceback (most recent call last):
+  File "/home/duclu/DWH_Cole_Project/src/load/Fact/Doanh_thu_TOT.py", line 25, in <module>
+    syncer.sync()
+  File "/home/duclu/DWH_Cole_Project/src/FactMergerSync.py", line 82, in sync
+    self._upload_temp_table()
+  File "/home/duclu/DWH_Cole_Project/src/FactMergerSync.py", line 52, in _upload_temp_table
+    self.df_source.to_sql(
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/core/generic.py", line 3106, in to_sql
+    return sql.to_sql(
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 844, in to_sql
+    return pandas_sql.to_sql(
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 2840, in to_sql
+    table.create()
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 986, in create
+    if self.exists():
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 972, in exists
+    return self.pd_sql.has_table(self.name, self.schema)
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 2855, in has_table
+    return len(self.execute(query, [name]).fetchall()) > 0
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 2662, in execute
+    cur = self.con.cursor()
+AttributeError: 'Engine' object has no attribute 'cursor'
+
+
+[ERROR - 2025-08-16 15:24:36.470037]
+Error message: 'Engine' object has no attribute 'cursor'
+Stack trace:
+Traceback (most recent call last):
+  File "/home/duclu/DWH_Cole_Project/src/load/Fact/Doanh_thu_TOT.py", line 25, in <module>
+    syncer.sync()
+  File "/home/duclu/DWH_Cole_Project/src/FactMergerSync.py", line 82, in sync
+    self._upload_temp_table()
+  File "/home/duclu/DWH_Cole_Project/src/FactMergerSync.py", line 52, in _upload_temp_table
+    self.df_source.to_sql(
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/core/generic.py", line 3106, in to_sql
+    return sql.to_sql(
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 844, in to_sql
+    return pandas_sql.to_sql(
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 2840, in to_sql
+    table.create()
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 986, in create
+    if self.exists():
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 972, in exists
+    return self.pd_sql.has_table(self.name, self.schema)
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 2855, in has_table
+    return len(self.execute(query, [name]).fetchall()) > 0
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 2662, in execute
+    cur = self.con.cursor()
+AttributeError: 'Engine' object has no attribute 'cursor'
+
+
+[ERROR - 2025-08-16 15:25:48.428094]
+Error message: 'Engine' object has no attribute 'cursor'
+Stack trace:
+Traceback (most recent call last):
+  File "/home/duclu/DWH_Cole_Project/src/load/Fact/Doanh_thu_TOT.py", line 25, in <module>
+    syncer.sync()
+  File "/home/duclu/DWH_Cole_Project/src/FactMergerSync.py", line 82, in sync
+    self._upload_temp_table()
+  File "/home/duclu/DWH_Cole_Project/src/FactMergerSync.py", line 52, in _upload_temp_table
+    self.df_source.to_sql(
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/core/generic.py", line 3106, in to_sql
+    return sql.to_sql(
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 844, in to_sql
+    return pandas_sql.to_sql(
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 2840, in to_sql
+    table.create()
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 986, in create
+    if self.exists():
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 972, in exists
+    return self.pd_sql.has_table(self.name, self.schema)
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 2855, in has_table
+    return len(self.execute(query, [name]).fetchall()) > 0
+  File "/home/duclu/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/sql.py", line 2662, in execute
+    cur = self.con.cursor()
+AttributeError: 'Engine' object has no attribute 'cursor'
