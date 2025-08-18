@@ -46,13 +46,30 @@ class SCDType1SyncMultipleKey:
             sql = f"INSERT INTO {self.table_name} ({cols}) VALUES ({placeholders})"
             sql_server_cursor.execute(sql, tuple(row))
 
-    def apply_update(self, updates: pd.DataFrame):
+    """def apply_update(self, updates: pd.DataFrame):
         for _, row in updates.iterrows():
             set_clause = ', '.join([f"{col} = ?" for col in self.compare_columns])
             where_clause = ' AND '.join([f"{col} = ?" for col in self.key_columns])
             sql = f"UPDATE {self.table_name} SET {set_clause} WHERE {where_clause}"
             params = [row[f"{col}_src"] for col in self.compare_columns] + [row[col] for col in self.key_columns]
-            sql_server_cursor.execute(sql, params)
+            sql_server_cursor.execute(sql, params)"""
+    def apply_update(self, updates):
+        set_clause = ", ".join([f"{col} = ?" for col in self.compare_columns])
+        where_clause = " AND ".join([f"{col} = ?" for col in self.key_columns])
+        
+        sql = f"UPDATE {self.table_name} SET {set_clause} WHERE {where_clause}"
+        
+        # Chuyển đổi numpy.int64 sang int Python
+        params = []
+        for col in self.compare_columns:
+            val = updates[f"{col}_src"].iloc[0]
+            params.append(int(val) if hasattr(val, 'item') else val)  # Xử lý numpy.int64
+        
+        for col in self.key_columns:
+            val = updates[col].iloc[0]
+            params.append(int(val) if hasattr(val, 'item') else val)  # Xử lý numpy.int64
+        
+        sql_server_cursor.execute(sql, params)
 
     def sync(self):
         # Nếu bảng đích trống, chèn toàn bộ

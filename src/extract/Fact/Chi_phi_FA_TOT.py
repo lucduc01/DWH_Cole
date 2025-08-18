@@ -2,8 +2,9 @@ from src.Get_data_DB import DataTransformer
 import os
 import requests
 import pandas as pd
-from datetime import date
+from datetime import date, datetime
 from dotenv import load_dotenv
+import traceback
 
 # Load biến môi trường từ file .env
 load_dotenv()
@@ -17,6 +18,14 @@ ACCESS_TOKENS = {
     "Cole8": os.getenv("BM_token")
 }
 
+# File log lỗi
+LOG_FILE = "/home/duclu/DWH_Cole_Project/log_error.text"
+
+def log_error(message: str):
+    """Ghi lỗi vào file log với timestamp"""
+    with open(LOG_FILE, "a", encoding="utf-8") as f:
+        f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {message}\n")
+
 # Truy vấn danh sách chiến dịch đã dừng
 paused_campaign_query = """
     SELECT STT AS campaign_id, 
@@ -27,7 +36,11 @@ paused_campaign_query = """
     WHERE Account IN ('C9','Cole8')
       AND Trang_thai = 'ACTIVE'
 """
-df = transformer.fetch_from_sql_server(paused_campaign_query)
+try:
+    df = transformer.fetch_from_sql_server(paused_campaign_query)
+except Exception as e:
+    log_error(f"Lỗi khi truy vấn SQL: {e}\n{traceback.format_exc()}")
+    raise
 
 # Hàm lấy chi phí theo ngày từ Facebook Graph API
 def fetch_campaign_spend(campaign_id, access_token, start_date, end_date):
@@ -38,9 +51,7 @@ def fetch_campaign_spend(campaign_id, access_token, start_date, end_date):
         "time_range": f'{{"since":"{start_date}", "until":"{end_date}"}}',
         "time_increment": 1,
         "limit": 100
-     
     }
-
     res = requests.get(url, params=params)
     res.raise_for_status()
     return res.json().get("data", [])
@@ -72,11 +83,15 @@ for account in ["C9", "Cole8"]:
                     "Spend": float(d["spend"])
                 })
         except Exception as e:
-            print(f"⚠️ Lỗi với chiến dịch {campaign_name} ({campaign_id}): {e}")
+            err_msg = f"Lỗi với chiến dịch {campaign_name} ({campaign_id}): {e}\n{traceback.format_exc()}"
+            print(f"⚠️ {err_msg}")
+            log_error(err_msg)
 
     # Ghi dữ liệu vào file CSV theo từng tài khoản
-    df_spend = pd.DataFrame(all_rows)
-    output_path = os.path.expanduser(f"~/DWH_Cole_Project/data_tmp/spend_{account}_ACTIVE.csv")
-    df_spend.to_csv(output_path, index=False)
-    print(f"✅ Đã ghi file CSV cho {account}: {output_path}")
-
+    try:
+        df_spend = pd.DataFrame(all_rows)
+        output_path = os.path.expanduser(f"~/DWH_Cole_Project/data_tmp/spend_{account}_ACTIVE.csv")
+        df_spend.to_csv(output_path, index=False)
+        print(f"✅ Đã ghi file CSV cho {account}: {output_path}")
+    except Exception as e:
+        log_error(f"Lỗi khi ghi CSV cho {account}: {e}\n{traceback.format_exc()}")

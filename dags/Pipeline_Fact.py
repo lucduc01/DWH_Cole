@@ -42,27 +42,28 @@ with DAG(
     transform_L1_8_Mess=BashOperator(task_id="transform_L1_8_Mess", bash_command="python ~/DWH_Cole_Project/src/transform/L1_8_Mess.py")
     
     # Fact Chi phí chạy Chuyển đổi TOT
-    extract_Chi_phi_FA_TOT=BashOperator(task_id="extract_Chi_phi_FA_TOT", bash_command="python ~/DWH_Cole_Project/src/extract/Chi_phi_FA_TOT.py")
-    transform_Chi_phi_FA_TOT=BashOperator(task_id="transform_Chi_phi_FA_TOT", bash_command="python ~/DWH_Cole_Project/src/transform/Chi_phi_FA_TOT.py")
-    load_Chi_phi_FA_TOT=BashOperator(task_id="load_Chi_phi_FA_TOT", bash_command="python ~/DWH_Cole_Project/src/load/Chi_phi_FA_TOT.py")
-    load_L7_8_FA_TOT=BashOperator(task_id="load_L7_8_FA_TOT", bash_command="python ~/DWH_Cole_Project/src/load/L7_8_FA_TOT.py")
+    extract_Chi_phi_FA_TOT=BashOperator(task_id="extract_Chi_phi_FA_TOT", bash_command="python  ~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py")
+    transform_Chi_phi_FA_TOT=BashOperator(task_id="transform_Chi_phi_FA_TOT", bash_command="python ~/DWH_Cole_Project/src/transform/Fact/Chi_phi_FA_TOT.py")
+    load_Chi_phi_FA_TOT=BashOperator(task_id="load_Chi_phi_FA_TOT", bash_command="python ~/DWH_Cole_Project/src/load/Fact/Chi_phi_FA_TOT.py")
+    load_L7_8_FA_TOT=BashOperator(task_id="load_L7_8_FA_TOT", bash_command="python ~/DWH_Cole_Project/src/load/Fact/L7_8_FA_TOT.py" )
+    
  
     # Fact Chi phí chạy Chuyển đổi TOA
-    transform_Chi_phi_FA_TOA=BashOperator(task_id="transform_Chi_phi_FA_TOA", bash_command="python ~/DWH_Cole_Project/src/transform/Chi_phi_FA_TOA.py")
-    load_Chi_phi_FA_TOA=BashOperator(task_id="load_Chi_phi_FA_TOA", bash_command="python ~/DWH_Cole_Project/src/load/Chi_phi_FA_TOA.py")
-    load_L7_8_FA_TOA=BashOperator(task_id="load_L7_8_FA_TOA", bash_command="python ~/DWH_Cole_Project/src/load/L7_8_FA_TOA.py")
+    transform_Chi_phi_FA_TOA=BashOperator(task_id="transform_Chi_phi_FA_TOA", bash_command="python ~/DWH_Cole_Project/src/transform/Fact/Chi_phi_FA_TOA.py")
+    load_Chi_phi_FA_TOA=BashOperator(task_id="load_Chi_phi_FA_TOA", bash_command="python ~/DWH_Cole_Project/src/load/Fact/Chi_phi_FA_TOA.py")
+    load_L7_8_FA_TOA=BashOperator(task_id="load_L7_8_FA_TOA", bash_command="python ~/DWH_Cole_Project/src/load/Fact/L7_8_FA_TOA.py")
 
     # Fact Chi phí chạy Messenger TOT
-    extract_Chi_phi_Mess_TOT=BashOperator(task_id="extract_Chi_phi_Mess_TOT", bash_command="python ~/DWH_Cole_Project/src/extract/Chi_phi_Mess_TOT.py")
-    transform_Chi_phi_Mess_TOT=BashOperator(task_id="transform_Chi_phi_Mess_TOT", bash_command="python ~/DWH_Cole_Project/src/transform/Chi_phi_Mess_TOT.py")
-    load_Chi_phi_Mess_TOT=BashOperator(task_id="load_Chi_phi_Mess_TOT", bash_command="python ~/DWH_Cole_Project/src/load/Chi_phi_Mess_TOT.py")
-    load_L7_8_Mess_TOT=BashOperator(task_id="load_L7_8_Mess_TOT", bash_command="python ~/DWH_Cole_Project/src/load/L7_8_Mess_TOT.py")
+    extract_Chi_phi_Mess_TOT=BashOperator(task_id="extract_Chi_phi_Mess_TOT", bash_command="python ~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py")
+    transform_Chi_phi_Mess_TOT=BashOperator(task_id="transform_Chi_phi_Mess_TOT", bash_command="python ~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py")
+    load_Chi_phi_Mess_TOT=BashOperator(task_id="load_Chi_phi_Mess_TOT", bash_command="python ~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py")
+    load_L7_8_Mess_TOT=BashOperator(task_id="load_L7_8_Mess_TOT", bash_command="python ~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py")
 
 
     # Fact Chi phí chạy Messenger TOA
-    transform_Chi_phi_Mess_TOA=BashOperator(task_id="transform_Chi_phi_Mess_TOA", bash_command="python ~/DWH_Cole_Project/src/transform/Chi_phi_Mess_TOA.py")
-    load_Chi_phi_Mess_TOA=BashOperator(task_id="load_Chi_phi_Mess_TOA", bash_command="python ~/DWH_Cole_Project/src/load/Chi_phi_Mess_TOA.py")
-    load_L7_8_Mess_TOA=BashOperator(task_id="load_L7_8_Mess_TOA", bash_command="python ~/DWH_Cole_Project/src/load/L7_8_Mess_TOA.py")
+    transform_Chi_phi_Mess_TOA=BashOperator(task_id="transform_Chi_phi_Mess_TOA", bash_command="python ~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py")
+    load_Chi_phi_Mess_TOA=BashOperator(task_id="load_Chi_phi_Mess_TOA", bash_command="python ~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py")
+    load_L7_8_Mess_TOA=BashOperator(task_id="load_L7_8_Mess_TOA", bash_command="python ~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py")
 
     # Chiến dịch Meta
     extract_Chien_dich_Meta=BashOperator(task_id="extract_Chien_dich_Meta", bash_command="python ~/DWH_Cole_Project/src/extract/Chien_dich_Meta.py")
@@ -70,26 +71,28 @@ with DAG(
     load_Chien_dich_Meta=BashOperator(task_id="load_Chien_dich_Meta", bash_command="python ~/DWH_Cole_Project/src/load/Chien_dich_Meta.py")
     
     # Fact Chi phí Branding
-    extract_Chi_phi_Branding=BashOperator(task_id="extract_Chi_phi_Branding", bash_command="python ~/DWH_Cole_Project/src/extract/Chi_phi_Branding.py")
-    transform_Chi_phi_Branding=BashOperator(task_id="transform_Chi_phi_Branding", bash_command="python ~/DWH_Cole_Project/src/transform/Chi_phi_Branding.py")
-    load_Chi_phi_Branding=BashOperator(task_id="load_Chi_phi_Branding", bash_command="python ~/DWH_Cole_Project/src/load/Chi_phi_Branding.py")
+    extract_Chi_phi_Branding=BashOperator(task_id="extract_Chi_phi_Branding", bash_command="python ~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py")
+    transform_Chi_phi_Branding=BashOperator(task_id="transform_Chi_phi_Branding", bash_command="python ~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py")
+    load_Chi_phi_Branding=BashOperator(task_id="load_Chi_phi_Branding", bash_command="python ~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py")
     
     # Fact Chi phí CTV
-    extract_Chi_phi_CTV=BashOperator(task_id="extract_Chi_phi_CTV", bash_command="python ~/DWH_Cole_Project/src/extract/Chi_phi_CTV.py")
-    transform_Chi_phi_CTV=BashOperator(task_id="transform_Chi_phi_CTV", bash_command="python ~/DWH_Cole_Project/src/transform/Chi_phi_CTV.py")
-    load_Chi_phi_CTV=BashOperator(task_id="load_Chi_phi_CTV", bash_command="python ~/DWH_Cole_Project/src/load/Chi_phi_CTV.py")
+    extract_Chi_phi_CTV=BashOperator(task_id="extract_Chi_phi_CTV", bash_command="python ~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py")
+    transform_Chi_phi_CTV=BashOperator(task_id="transform_Chi_phi_CTV", bash_command="python ~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py")
+    load_Chi_phi_CTV=BashOperator(task_id="load_Chi_phi_CTV", bash_command=("python ~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py",
+                                                                            ">> /home/duclu/DWH_Cole_Project/log_error.text 2>&1"
+        "|| (echo '[`date`] ❌ Lỗi khi chạy load_Chi_phi_CTV' >> /home/duclu/DWH_Cole_Project/log_error.text; exit 1)"))
  
     # Fact Kế hoạch Marketing
-    extract_Ke_hoach_Marketing=BashOperator(task_id="extract_Ke_hoach_Marketing", bash_command="python ~/DWH_Cole_Project/src/extract/Ke_hoach_Marketing.py")
-    transform_Ke_hoach_Marketing=BashOperator(task_id="transform_Ke_hoach_Marketing", bash_command="python ~/DWH_Cole_Project/src/transform/Ke_hoach_Marketing.py")
-    load_Ke_hoach_Marketing_Thang=BashOperator(task_id="load_Ke_hoach_Marketing_Thang", bash_command="python ~/DWH_Cole_Project/src/load/Ke_hoach_Marketing_Thang.py")
-    load_Ke_hoach_Marketing_Tuan=BashOperator(task_id="load_Ke_hoach_Marketing_Tuan", bash_command="python ~/DWH_Cole_Project/src/load/Ke_hoach_Marketing_Tuan.py")
+    extract_Ke_hoach_Marketing=BashOperator(task_id="extract_Ke_hoach_Marketing", bash_command="python ~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Marketing.py")
+    transform_Ke_hoach_Marketing=BashOperator(task_id="transform_Ke_hoach_Marketing", bash_command="python ~/DWH_Cole_Project/src/transform/Fact/Ke_hoach_Marketing.py")
+    load_Ke_hoach_Marketing_Thang=BashOperator(task_id="load_Ke_hoach_Marketing_Thang", bash_command="python ~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Marketing_Thang.py")
+    load_Ke_hoach_Marketing_Tuan=BashOperator(task_id="load_Ke_hoach_Marketing_Tuan", bash_command="python ~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Marketing_Tuan.py")
 
     # Fact Kế hoạch Sale
-    extract_Ke_hoach_Sale=BashOperator(task_id="extract_Ke_hoach_Sale", bash_command="python ~/DWH_Cole_Project/src/extract/Ke_hoach_Sale.py")
-    transform_Ke_hoach_Sale=BashOperator(task_id="transform_Ke_hoach_Sale", bash_command="python ~/DWH_Cole_Project/src/transform/Ke_hoach_Sale.py")
-    load_Ke_hoach_Sale_TOA=BashOperator(task_id="load_Ke_hoach_Sale_TOA", bash_command="python ~/DWH_Cole_Project/src/load/Ke_hoach_Sale_TOA.py")
-    load_Ke_hoach_Sale_TOT=BashOperator(task_id="load_Ke_hoach_Sale_TOT", bash_command="python ~/DWH_Cole_Project/src/load/Ke_hoach_Sale_TOT.py")
+    extract_Ke_hoach_Sale=BashOperator(task_id="extract_Ke_hoach_Sale", bash_command="python ~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Sale.py")
+    transform_Ke_hoach_Sale=BashOperator(task_id="transform_Ke_hoach_Sale", bash_command="python ~/DWH_Cole_Project/src/transform/Fact/Ke_hoach_Sale.py")
+    load_Ke_hoach_Sale_TOA=BashOperator(task_id="load_Ke_hoach_Sale_TOA", bash_command="python ~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOA.py")
+    load_Ke_hoach_Sale_TOT=BashOperator(task_id="load_Ke_hoach_Sale_TOT", bash_command="python ~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py")
 
     # Chạy nối tiếp từng nhóm
     # --- Các flow tuyến tính ---

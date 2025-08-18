@@ -1,86 +1,71 @@
+from datetime import datetime
+from typing import Dict, List
 import pandas as pd
-from sqlalchemy import create_engine, text
-from typing import Optional
-from dotenv import load_dotenv
-from urllib.parse import quote_plus
-import os
+from Connect_DB import sql_server_conn, sql_server_cursor
 
-class FactMergerSync:
-    def __init__(
-        self,
-        df_source: pd.DataFrame,
-        table_name: str,
-        key_column: str,
-        temp_table_name: str = "temp_fact_sync",
-        env_file: str = ".env"
-    ):
-        """
-        df_source: DataFrame cần đồng bộ (đã được lọc 3 tháng gần nhất)
-        table_name: tên bảng đích trong SQL Server
-        key_column: tên cột khóa chính
-        env_file: đường dẫn đến file .env chứa thông tin kết nối
-        """
+class SCDType1SyncFact:
+    def __init__(self, df_source, df_target, key_column, table_name):
         self.df_source = df_source.copy()
-        self.table_name = table_name
+        self.df_target = df_target.copy()
         self.key_column = key_column
-        self.temp_table_name = temp_table_name
-        self.compare_columns = [col for col in self.df_source.columns if col != key_column]
+        
+        # Xác định các cột cần so sánh (loại bỏ key)
+        self.compare_columns = [col for col in self.df_source.columns if col != self.key_column]
+        
+        # Kết nối SQL Server
+        self.sql_server_conn = sql_server_conn
+        self.sql_server_cursor = sql_server_cursor
+        
+        # Tên bảng trong SQL Server cần đồng bộ
+        self.table_name = table_name
 
-        # Load biến môi trường từ file .env
-        load_dotenv(dotenv_path=env_file)
-        host = os.getenv("Host_DWH")
-        port = os.getenv("Port_DWH", "1433")
-        user = os.getenv("User_DWH")
-        password = os.getenv("Pass_DWH")
-        database = os.getenv("Db_DWH")
-        driver = "ODBC Driver 17 for SQL Server"
+    def _get_updates(self):
+        if not self.compare_columns:
+            return pd.DataFrame(columns=[self.key_column])
 
-        # Tạo connection string
-        params = quote_plus(
-            f"DRIVER={driver};"
-            f"SERVER={host},{port};"
-            f"DATABASE={database};"
-            f"UID={user};"
-            f"PWD={password};"
-            f"TrustServerCertificate=yes;"
-            f"Connection Timeout=60;"
-        )
-        connection_string = f"mssql+pyodbc:///?odbc_connect={params}"
-        self.engine = create_engine(connection_string, fast_executemany=True)
-
-    def _upload_temp_table(self):
-        self.df_source.to_sql(
-            name=self.temp_table_name,
-            con=self.engine,
-            if_exists='replace',
-            index=False
+        df_merge = pd.merge(
+            self.df_source,
+            self.df_target,
+            on=self.key_column,
+            how='inner',
+            suffixes=('_src', '_tgt')
         )
 
-    def _generate_merge_sql(self):
-        set_clause = ', '.join([f"target.[{col}] = source.[{col}]" for col in self.compare_columns])
-        insert_columns = ', '.join([f"[{col}]" for col in self.df_source.columns])
-        insert_values = ', '.join([f"source.[{col}]" for col in self.df_source.columns])
-        match_condition = f"target.[{self.key_column}] = source.[{self.key_column}]"
-        compare_cond = ' OR '.join([
-            f"ISNULL(target.[{col}], '') <> ISNULL(source.[{col}], '')" for col in self.compare_columns
-        ])
-        return f"""
-        MERGE {self.table_name} AS target
-        USING {self.temp_table_name} AS source
-        ON {match_condition}
-        WHEN MATCHED AND ({compare_cond}) THEN
-            UPDATE SET {set_clause}
-        WHEN NOT MATCHED BY TARGET THEN
-            INSERT ({insert_columns})
-            VALUES ({insert_values});
-        """
+        # Điều kiện để xác định hàng cần cập nhật
+        cond = pd.Series([False] * len(df_merge), index=df_merge.index)
+        for col in self.compare_columns:
+            cond |= (df_merge[f'{col}_src'] != df_merge[f'{col}_tgt'])
+        
+        return df_merge[cond][[self.key_column] + [f'{col}_src' for col in self.compare_columns]]
+
+    def _get_inserts(self):
+        ids_target = set(self.df_target[self.key_column])
+        return self.df_source[~self.df_source[self.key_column].isin(ids_target)]
 
     def sync(self):
-        if self.df_source.empty:
-            print("⚠️ Không có dữ liệu để đồng bộ.")
-            return
-        self._upload_temp_table()
-        merge_sql = self._generate_merge_sql()
-        with self.engine.begin() as conn:
-            conn.execute(text(merge_sql))
-        print("✅ Đồng bộ thành công bằng MERGE SQL.")
+        updates = self._get_updates()
+        inserts = self._get_inserts()
+        
+        # Cập nhật các bản ghi đã thay đổi
+        if not updates.empty:
+            set_clause = ', '.join([f"{col} = ?" for col in self.compare_columns])
+            for i in range(0, len(updates), 100):  # Batch 100 records
+                batch = updates.iloc[i:i + 100]
+                for _, row in batch.iterrows():
+                    sql = f"UPDATE {self.table_name} SET {set_clause} WHERE {self.key_column} = ?"
+                    params = [row[f'{col}_src'] for col in self.compare_columns] + [row[self.key_column]]
+                    self.sql_server_cursor.execute(sql, params)
+
+        # Thêm mới các bản ghi
+        if not inserts.empty:
+            for i in range(0, len(inserts), 100):  # Batch 100 records
+                batch = inserts.iloc[i:i + 100]
+                for _, row in batch.iterrows():
+                    cols = ', '.join(inserts.columns)
+                    placeholders = ', '.join(['?'] * len(row))
+                    sql = f"INSERT INTO {self.table_name} ({cols}) VALUES ({placeholders})"
+                    self.sql_server_cursor.execute(sql, tuple(row))
+
+        # Commit tất cả các thay đổi
+        self.sql_server_conn.commit()
+        self.sql_server_conn.close()
