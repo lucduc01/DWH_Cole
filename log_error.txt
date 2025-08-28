@@ -1,0 +1,338 @@
+[2025-08-28 14:58:22][~/DWH_Cole_Project/src/extract/L1_8_Mess.py] Đọc dữ liệu thành công từ Google Sheet công khai!
+[2025-08-28 14:58:22][~/DWH_Cole_Project/src/extract/L1_8_Mess.py] Đọc dữ liệu thành công từ Google Sheet công khai!
+[2025-08-28 14:58:22][~/DWH_Cole_Project/src/extract/L1_8_Mess.py] Đọc dữ liệu thành công từ Google Sheet công khai!
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] 📊 Lấy dữ liệu spend: Event_BRD_DE_Bootcamp - Bản sao (120227506684710452) từ 2025-07-25
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] ⚠️ Lỗi với chiến dịch Event_BRD_DE_Bootcamp - Bản sao (120227506684710452): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120227506684710452/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-07-25%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] 📊 Lấy dữ liệu spend: Event_BRD_DE_Bootcamp - Bản sao 2 (120227619352290452) từ 2025-07-28
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] ⚠️ Lỗi với chiến dịch Event_BRD_DE_Bootcamp - Bản sao 2 (120227619352290452): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120227619352290452/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-07-28%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] 📊 Lấy dữ liệu spend: FA_DS.01_Branding_Tuongtac (120227725550010452) từ 2025-07-30
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] ⚠️ Lỗi với chiến dịch FA_DS.01_Branding_Tuongtac (120227725550010452): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120227725550010452/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-07-30%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] 📊 Lấy dữ liệu spend: Event_BRD_AIDS_Webinar (120228187743520452) từ 2025-08-06
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] ⚠️ Lỗi với chiến dịch Event_BRD_AIDS_Webinar (120228187743520452): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120228187743520452/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-08-06%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] 📊 Lấy dữ liệu spend: Event_BRD_PSE_Webinar (120228492625430452) từ 2025-08-13
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] ⚠️ Lỗi với chiến dịch Event_BRD_PSE_Webinar (120228492625430452): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120228492625430452/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-08-13%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] 📊 Lấy dữ liệu spend: Event_BRD_PSE_Webinar - Bản sao (120228493177250452) từ 2025-08-13
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] ⚠️ Lỗi với chiến dịch Event_BRD_PSE_Webinar - Bản sao (120228493177250452): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120228493177250452/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-08-13%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] 📊 Lấy dữ liệu spend: FA_PSE_Branding_TuongtacPage_20_08 (120228797478290452) từ 2025-08-20
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] ⚠️ Lỗi với chiến dịch FA_PSE_Branding_TuongtacPage_20_08 (120228797478290452): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120228797478290452/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-08-20%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 14:58:54][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Branding.py] ✅ Đã ghi file CSV cho : /home/vndic/DWH_Cole_Project/data_tmp/spend_Branding.csv
+[2025-08-28 14:59:05][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py] 📊 Lấy dữ liệu spend: FA_DE.COMBO01_QuanNV_CTV_MyTien_Mess_DE 05_08_2025 (120233238538980548) từ 2025-08-05
+[2025-08-28 14:59:05][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py] ⚠️ Lỗi với chiến dịch FA_DE.COMBO01_QuanNV_CTV_MyTien_Mess_DE 05_08_2025 (120233238538980548): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120233238538980548/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-08-05%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 14:59:05][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py] 📊 Lấy dữ liệu spend: FA_DS.01_QuanNV_CTV_Ngan_Mess_DS.01 12_08_2025 (120233639543560548) từ 2025-08-12
+[2025-08-28 14:59:05][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py] ⚠️ Lỗi với chiến dịch FA_DS.01_QuanNV_CTV_Ngan_Mess_DS.01 12_08_2025 (120233639543560548): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120233639543560548/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-08-12%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 14:59:05][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py] 📊 Lấy dữ liệu spend: FA_AI.2025_QuanNV_CTV_DiepNTH_Mess_AI.2025 13_08_2025 (120233712760910548) từ 2025-08-13
+[2025-08-28 14:59:05][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py] ⚠️ Lỗi với chiến dịch FA_AI.2025_QuanNV_CTV_DiepNTH_Mess_AI.2025 13_08_2025 (120233712760910548): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120233712760910548/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-08-13%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 14:59:05][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py] 📊 Lấy dữ liệu spend: FA_ITBA_QuanNV_CTV_ThaoTT_Mess_BA 18_08_2025 (120234055126240548) từ 2025-08-18
+[2025-08-28 14:59:05][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py] ⚠️ Lỗi với chiến dịch FA_ITBA_QuanNV_CTV_ThaoTT_Mess_BA 18_08_2025 (120234055126240548): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120234055126240548/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-08-18%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 14:59:05][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py] 📊 Lấy dữ liệu spend: FA_ML.I_QuanNV_CTV_LongTD_Mess_ML.I 27_08_2025 (120234580585850548) từ 2025-08-27
+[2025-08-28 14:59:05][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py] ⚠️ Lỗi với chiến dịch FA_ML.I_QuanNV_CTV_LongTD_Mess_ML.I 27_08_2025 (120234580585850548): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120234580585850548/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-08-27%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 14:59:05][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py] ✅ Đã ghi file CSV cho : /home/vndic/DWH_Cole_Project/data_tmp/spend_CTV.csv
+[2025-08-28 14:59:44][~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Marketing.py] ✅ Đọc dữ liệu thành công (dòng 2 làm header).
+[2025-08-28 14:59:59][~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Sale.py] 📊 Đang xử lý Google Sheet: https://docs.google.com/spreadsheets/d/1t12bkO-d1keJPpp81Tw-HgKafIcdLBL4gsBSdKre2QE/edit?gid=0#gid=0
+[2025-08-28 14:59:59][~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Sale.py] 
+[2025-08-28 14:59:59][~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Sale.py] --- Đọc Sheet 1 ---
+[2025-08-28 14:59:59][~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Sale.py] ✅ Đọc Sheet 1 thành công (dòng 4 làm header).
+[2025-08-28 14:59:59][~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Sale.py] Sheet 1: 22 dòng, 10 cột
+[2025-08-28 14:59:59][~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Sale.py] 📁 Đã lưu Sheet 1 vào: ~/DWH_Cole_Project/data_tmp/Ke_hoach_Sale_TOA.csv
+[2025-08-28 14:59:59][~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Sale.py] 
+[2025-08-28 14:59:59][~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Sale.py] --- Đọc Sheet 2 ---
+[2025-08-28 14:59:59][~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Sale.py] ✅ Đọc Sheet 2 thành công (dòng 1 làm header).
+[2025-08-28 14:59:59][~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Sale.py] Sheet 2: 37 dòng, 11 cột
+[2025-08-28 14:59:59][~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Sale.py] 📁 Đã lưu Sheet 2 vào: ~/DWH_Cole_Project/data_tmp/Ke_hoach_Sale_TOT.csv
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] Traceback (most recent call last):
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] return self._engine.get_loc(casted_key)
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] KeyError: 'Unnamed: 10_src'
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] 
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] The above exception was the direct cause of the following exception:
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] 
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] Traceback (most recent call last):
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] File "/home/vndic/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py", line 19, in <module>
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] syncer.sync()
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] File "/home/vndic/DWH_Cole_Project/src/SCD1_CompositeKey.py", line 100, in sync
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] updates = self.get_updates()
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] File "/home/vndic/DWH_Cole_Project/src/SCD1_CompositeKey.py", line 29, in get_updates
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] cond |= (df_merge[f"{col}_src"] != df_merge[f"{col}_tgt"])
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/core/frame.py", line 4107, in __getitem__
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] indexer = self.columns.get_loc(key)
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] raise KeyError(key) from err
+[2025-08-28 15:00:20][~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py] KeyError: 'Unnamed: 10_src'
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] Traceback (most recent call last):
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] File "/home/vndic/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py", line 6, in <module>
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] df_level=pd.read_csv("~/DWH_Cole_Project/data_result/Count_Level_TOT_transformed.csv")
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] self.handles = get_handle(
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] handle = open(
+[2025-08-28 15:00:25][~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_result/Count_Level_TOT_transformed.csv'
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] 
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] 🔍 Đang xử lý tài khoản C9 - Tổng số chiến dịch: 1
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] 📊 Lấy dữ liệu spend: FA_AI.2025_HienPT_CVS_12_08 (120230933439750236) từ 2025-08-12
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] ⚠️ Lỗi với chiến dịch FA_AI.2025_HienPT_CVS_12_08 (120230933439750236): 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120230933439750236/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-08-12%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] Traceback (most recent call last):
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] File "/home/vndic/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py", line 77, in <module>
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] spend_data = fetch_campaign_spend(campaign_id, access_token, start_date, today)
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] File "/home/vndic/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py", line 56, in fetch_campaign_spend
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] res.raise_for_status()
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] raise HTTPError(http_error_msg, response=self)
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120230933439750236/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-08-12%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] 
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] Traceback (most recent call last):
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] File "/home/vndic/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py", line 77, in <module>
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] spend_data = fetch_campaign_spend(campaign_id, access_token, start_date, today)
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] File "/home/vndic/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py", line 56, in fetch_campaign_spend
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] res.raise_for_status()
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] raise HTTPError(http_error_msg, response=self)
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/120230933439750236/insights?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=spend%2Cdate_start&time_range=%7B%22since%22%3A%222025-08-12%22%2C+%22until%22%3A%222025-08-28%22%7D&time_increment=1&limit=100
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] 
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] During handling of the above exception, another exception occurred:
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] 
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] Traceback (most recent call last):
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] File "/home/vndic/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py", line 88, in <module>
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] log_error(err_msg)
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] File "/home/vndic/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py", line 26, in log_error
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] with open(LOG_FILE, "a", encoding="utf-8") as f:
+[2025-08-28 15:00:37][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_FA_TOT.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/duclu/DWH_Cole_Project/log_error.text'
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] Traceback (most recent call last):
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] File "/home/vndic/DWH_Cole_Project/src/transform/L1_8_Mess.py", line 8, in <module>
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] df_bonus=pd.read_csv("~/DWH_Cole_Project/data_result/Chi_phi_mess_bonus_transformed.csv")
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] self.handles = get_handle(
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] handle = open(
+[2025-08-28 15:00:43][~/DWH_Cole_Project/src/transform/L1_8_Mess.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_result/Chi_phi_mess_bonus_transformed.csv'
+[2025-08-28 15:00:56][~/DWH_Cole_Project/src/transform/Fact/Doanh_thu_TOA.py] /home/vndic/DWH_Cole_Project/src/transform/Fact/Doanh_thu_TOA.py:53: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+[2025-08-28 15:00:56][~/DWH_Cole_Project/src/transform/Fact/Doanh_thu_TOA.py] df_combo = df_combo.groupby(['Ten_hoc_sinh', 'Ten_san_pham'], group_keys=False).apply(xu_ly_nhom)
+[2025-08-28 15:01:02][~/DWH_Cole_Project/src/transform/Fact/Doanh_so_TOT.py] /home/vndic/DWH_Cole_Project/src/transform/Fact/Doanh_so_TOT.py:18: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+[2025-08-28 15:01:02][~/DWH_Cole_Project/src/transform/Fact/Doanh_so_TOT.py] df = df.groupby(['Khach_hang', 'Ma_khoa_hoc'], group_keys=False).apply(get_first_sorted)
+[2025-08-28 15:01:09][~/DWH_Cole_Project/src/transform/Fact/Doanh_so_TOA.py] /home/vndic/DWH_Cole_Project/src/transform/Fact/Doanh_so_TOA.py:53: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+[2025-08-28 15:01:09][~/DWH_Cole_Project/src/transform/Fact/Doanh_so_TOA.py] df_combo = df_combo.groupby(['Ten_hoc_sinh', 'Ten_san_pham'], group_keys=False).apply(xu_ly_nhom)
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] Traceback (most recent call last):
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] File "/home/vndic/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py", line 2, in <module>
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] df=pd.read_csv("~/DWH_Cole_Project/data_tmp/spend_Branding.csv")
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1898, in _make_engine
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] return mapping[engine](f, **self.options)
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 93, in __init__
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] self._reader = parsers.TextReader(src, **kwds)
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] File "pandas/_libs/parsers.pyx", line 581, in pandas._libs.parsers.TextReader.__cinit__
+[2025-08-28 15:01:22][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Branding.py] pandas.errors.EmptyDataError: No columns to parse from file
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] Traceback (most recent call last):
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] File "/home/vndic/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py", line 2, in <module>
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] df=pd.read_csv("~/DWH_Cole_Project/data_tmp/spend_CTV.csv")
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1898, in _make_engine
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] return mapping[engine](f, **self.options)
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 93, in __init__
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] self._reader = parsers.TextReader(src, **kwds)
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] File "pandas/_libs/parsers.pyx", line 581, in pandas._libs.parsers.TextReader.__cinit__
+[2025-08-28 15:01:28][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py] pandas.errors.EmptyDataError: No columns to parse from file
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] Traceback (most recent call last):
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] File "/home/vndic/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py", line 7, in <module>
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] df_source=pd.read_csv("~/DWH_Cole_Project/data_result/Tong_ket_Marketing.csv")
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] self.handles = get_handle(
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] handle = open(
+[2025-08-28 15:01:40][~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_result/Tong_ket_Marketing.csv'
+[2025-08-28 15:01:48][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_FA_TOT.py] /home/vndic/DWH_Cole_Project/src/transform/Fact/Chi_phi_FA_TOT.py:181: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+[2025-08-28 15:01:48][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_FA_TOT.py] df_mess_bonus['Chi_phi'] = df_mess_bonus['Chi_phi'].fillna(0)
+[2025-08-28 15:01:48][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_FA_TOT.py] File ~/DWH_Cole_Project/data_tmp/spend_C9_ACTIVE.csv rỗng hoặc không tồn tại. Tạo DataFrame rỗng.
+[2025-08-28 15:01:48][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_FA_TOT.py] File ~/DWH_Cole_Project/data_tmp/spend_Cole8_ACTIVE.csv rỗng hoặc không tồn tại. Tạo DataFrame rỗng.
+[2025-08-28 15:01:55][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py] 📌 Campaign: FA_ITBA_HIENPT_mess_pagecole_25_12 (120213659814180378)
+[2025-08-28 15:01:55][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py] ⛔ Lỗi: {"error":{"message":"Malformed access token EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD>BM_token=EAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD","type":"OAuthException","code":190,"fbtrace_id":"Abz_vE33bd_xPXpGl6lS_Hd"}}
+[2025-08-28 15:01:55][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py] Traceback (most recent call last):
+[2025-08-28 15:01:55][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py", line 90, in <module>
+[2025-08-28 15:01:55][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py] adsets = get_adsets_with_conversations(campaign_id, ACCESS_TOKEN)
+[2025-08-28 15:01:55][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py", line 59, in get_adsets_with_conversations
+[2025-08-28 15:01:55][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py] data = safe_request(url, params)
+[2025-08-28 15:01:55][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py", line 45, in safe_request
+[2025-08-28 15:01:55][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py] raise Exception(response.text)
+[2025-08-28 15:01:55][~/DWH_Cole_Project/src/extract/Fact/Chi_phi_Mess_TOT.py] Exception: {"error":{"message":"Malformed access token EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD>BM_token=EAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD","type":"OAuthException","code":190,"fbtrace_id":"Abz_vE33bd_xPXpGl6lS_Hd"}}
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] Traceback (most recent call last):
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] File "/home/vndic/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py", line 9, in <module>
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] df_src=pd.read_csv('~/DWH_Cole_Project/data_result/Chi_phi_Branding_transformed.csv')
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] self.handles = get_handle(
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] handle = open(
+[2025-08-28 15:02:35][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Branding.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_result/Chi_phi_Branding_transformed.csv'
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] Traceback (most recent call last):
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] File "/home/vndic/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py", line 9, in <module>
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] df_src=pd.read_csv('~/DWH_Cole_Project/data_result/Chi_phi_CTV_transformed.csv')
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] self.handles = get_handle(
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] handle = open(
+[2025-08-28 15:02:42][~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_result/Chi_phi_CTV_transformed.csv'
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] Traceback (most recent call last):
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py", line 56, in <module>
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] df_L1=pd.read_csv("~/DWH_Cole_Project/data_result/Count_L_of_Mess.csv")
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] self.handles = get_handle(
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] handle = open(
+[2025-08-28 15:02:56][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOT.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_result/Count_L_of_Mess.csv'
+[2025-08-28 15:03:02][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_FA_TOA.py] /home/vndic/DWH_Cole_Project/src/transform/Fact/Chi_phi_FA_TOA.py:83: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+[2025-08-28 15:03:02][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_FA_TOA.py] valid_records_processed = grouped.apply(adjust_group_values)
+[2025-08-28 15:03:12][~/DWH_Cole_Project/src/extract/Chien_dich_Meta.py] 📥 Đang lấy dữ liệu chiến dịch cho tài khoản: Mkt
+[2025-08-28 15:03:12][~/DWH_Cole_Project/src/extract/Chien_dich_Meta.py] ❌ Lỗi khi xử lý tài khoản Mkt: 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/act_169555847819292/campaigns?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=id%2Cname%2Cstart_time%2Cstatus%2Ceffective_status&limit=100
+[2025-08-28 15:03:12][~/DWH_Cole_Project/src/extract/Chien_dich_Meta.py] 📥 Đang lấy dữ liệu chiến dịch cho tài khoản: C9
+[2025-08-28 15:03:12][~/DWH_Cole_Project/src/extract/Chien_dich_Meta.py] ❌ Lỗi khi xử lý tài khoản C9: 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/act_1837985839678263/campaigns?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=id%2Cname%2Cstart_time%2Cstatus%2Ceffective_status&limit=100
+[2025-08-28 15:03:12][~/DWH_Cole_Project/src/extract/Chien_dich_Meta.py] 📥 Đang lấy dữ liệu chiến dịch cho tài khoản: Cole8
+[2025-08-28 15:03:12][~/DWH_Cole_Project/src/extract/Chien_dich_Meta.py] ❌ Lỗi khi xử lý tài khoản Cole8: 403 Client Error: Forbidden for url: https://graph.facebook.com/v20.0/act_248174891428790/campaigns?fields=id%2Cname%2Cstart_time%2Cstatus%2Ceffective_status&limit=100
+[2025-08-28 15:03:12][~/DWH_Cole_Project/src/extract/Chien_dich_Meta.py] 📥 Đang lấy dữ liệu chiến dịch cho tài khoản: Branding
+[2025-08-28 15:03:12][~/DWH_Cole_Project/src/extract/Chien_dich_Meta.py] ❌ Lỗi khi xử lý tài khoản Branding: 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/act_1089280788108833/campaigns?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=id%2Cname%2Cstart_time%2Cstatus%2Ceffective_status&limit=100
+[2025-08-28 15:03:12][~/DWH_Cole_Project/src/extract/Chien_dich_Meta.py] 📥 Đang lấy dữ liệu chiến dịch cho tài khoản: CTV
+[2025-08-28 15:03:12][~/DWH_Cole_Project/src/extract/Chien_dich_Meta.py] ❌ Lỗi khi xử lý tài khoản CTV: 400 Client Error: Bad Request for url: https://graph.facebook.com/v20.0/act_265101424701457/campaigns?access_token=EAFUjDUXQuDwBPOQbM1oGPZCUJtYhSWG07dxmgrEZAaNGur8suZCZB7gVYyq71ZCunGNahVfxpRv5ZAkG56h4r4FtdIpnhi2303iLGIDt2TZAKnjMLr0Oi48QqlvLe9bA47H61iZClVkOT047Eg0BXa8p2Fmi7ziZBafsSOytRqj7xByZA7xs5fDi38rDz1ovOABAZD%3EBM_token%3DEAAKCYcSbXVEBPJ5hsVPJFohw6cKqcTrwZA9k2jpxMeEqraPEf4rZAvrjjWtaZCmZC0WzWPe39l6UMF0aD3OpFeuNgvJ4wOvJku1sEoFcUx0uyETZCZAZBjZCEPjhUdWPYHlJC5mP5jXTmzmauyPSkmBhZB2t9MyuTI8PWsV3YqWDVKLPMGNCDh3tx1XNwVUjQRgZDZD&fields=id%2Cname%2Cstart_time%2Cstatus%2Ceffective_status&limit=100
+[2025-08-28 15:03:31][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] Traceback (most recent call last):
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] File "/home/vndic/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py", line 20, in <module>
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] df= pd.read_csv("~/DWH_Cole_Project/data_result/Chi_phi_Mess_transformed.csv")
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] self.handles = get_handle(
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] handle = open(
+[2025-08-28 15:03:32][~/DWH_Cole_Project/src/transform/Fact/Chi_phi_Mess_TOA.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_result/Chi_phi_Mess_transformed.csv'
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] Traceback (most recent call last):
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] File "/home/vndic/DWH_Cole_Project/src/transform/Chien_dich_Meta.py", line 26, in <module>
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] df = pd.read_csv(file_path)
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] self.handles = get_handle(
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] handle = open(
+[2025-08-28 15:03:37][~/DWH_Cole_Project/src/transform/Chien_dich_Meta.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_tmp/campaigns_C9.csv'
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] Traceback (most recent call last):
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py", line 7, in <module>
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] df_source=pd.read_csv("~/DWH_Cole_Project/data_result/Chi_phi_Mess_transformed.csv")
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] self.handles = get_handle(
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] handle = open(
+[2025-08-28 15:03:57][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOT.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_result/Chi_phi_Mess_transformed.csv'
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] Traceback (most recent call last):
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] File "/home/vndic/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py", line 7, in <module>
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] df_source=pd.read_csv("~/DWH_Cole_Project/data_result/L78_Mess_transformed.csv")
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] self.handles = get_handle(
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] handle = open(
+[2025-08-28 15:04:03][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOT.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_result/L78_Mess_transformed.csv'
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] Traceback (most recent call last):
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] File "/home/vndic/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py", line 7, in <module>
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] df_source=pd.read_csv("~/DWH_Cole_Project/data_result/Chi_phi_Mess_TOA_transformed.csv")
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] self.handles = get_handle(
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] handle = open(
+[2025-08-28 15:04:10][~/DWH_Cole_Project/src/load/Fact/Chi_phi_Mess_TOA.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_result/Chi_phi_Mess_TOA_transformed.csv'
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] Traceback (most recent call last):
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] File "/home/vndic/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py", line 7, in <module>
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] df_source=pd.read_csv("~/DWH_Cole_Project/data_result/L78_Mess_TOA_transformed.csv")
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] self.handles = get_handle(
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] handle = open(
+[2025-08-28 15:04:17][~/DWH_Cole_Project/src/load/Fact/L7_8_Mess_TOA.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_result/L78_Mess_TOA_transformed.csv'
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] Traceback (most recent call last):
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] File "/home/vndic/DWH_Cole_Project/src/load/Chien_dich_Meta.py", line 7, in <module>
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] df_source=pd.read_csv("~/DWH_Cole_Project/data_result/Chien_dich_meta.csv")
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] return _read(filepath_or_buffer, kwds)
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] self._engine = self._make_engine(f, self.engine)
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] self.handles = get_handle(
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] File "/home/vndic/miniconda3/envs/DWH_Cole/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] handle = open(
+[2025-08-28 15:04:24][~/DWH_Cole_Project/src/load/Chien_dich_Meta.py] FileNotFoundError: [Errno 2] No such file or directory: '/home/vndic/DWH_Cole_Project/data_result/Chien_dich_meta.csv'
