@@ -2,6 +2,7 @@ import requests
 from dotenv import load_dotenv
 import os
 from datetime import datetime
+from dateutil.relativedelta import relativedelta   
 import csv
 
 # Load biến môi trường
@@ -40,8 +41,6 @@ ACCOUNTS = [
     }
 ]
 
-
-
 # Hàm lấy chiến dịch
 def get_campaigns(ad_account_id, access_token):
     url = f"https://graph.facebook.com/v20.0/{ad_account_id}/campaigns"
@@ -49,12 +48,13 @@ def get_campaigns(ad_account_id, access_token):
         "access_token": access_token,
         "fields": "id,name,start_time,status,effective_status",
         "limit": 100
-    
     }
 
     campaigns = []
-    min_start_date = datetime.strptime("2024-01-01", "%Y-%m-%d")
 
+    # 👉 Lấy ngày hiện tại lùi 2 năm 
+    min_start_date = datetime.today() - relativedelta(months=24)
+   
     while url:
         response = requests.get(url, params=params if '?' not in url else None)
         response.raise_for_status()
@@ -79,6 +79,7 @@ def get_campaigns(ad_account_id, access_token):
         url = data.get("paging", {}).get("next")
 
     return campaigns
+
 
 # Lặp qua tài khoản và ghi CSV
 for account in ACCOUNTS:

@@ -6,7 +6,7 @@ transformer=DataTransformer()
 #Lấy dữ liệu
 df_source=pd.read_csv("~/DWH_Cole_Project/data_result/Chien_dich_meta.csv")
 
-sql_query=""" select * from Chien_dich_Meta
+sql_query=""" select * from Chien_dich_Meta where Ngay_bat_dau >= DATEADD(MONTH, -24, GETDATE()) 
           """
 df_target=transformer.fetch_from_sql_server(sql_query)
 

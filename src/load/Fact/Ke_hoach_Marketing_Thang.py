@@ -6,7 +6,7 @@ transformer=DataTransformer()
 #Lấy dữ liệu
 df_source=pd.read_csv("~/DWH_Cole_Project/data_result/Ke_hoach_Marketing_Thang_transformed.csv")
 
-sql_query = """ select * from Fact_Ke_hoach_Marketing_Thang
+sql_query = """ select * from Fact_Ke_hoach_Marketing_Thang 
             """
 
 df_target=transformer.fetch_from_sql_server(sql_query)

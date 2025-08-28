@@ -53,23 +53,43 @@ class SCDType1SyncMultipleKey:
             sql = f"UPDATE {self.table_name} SET {set_clause} WHERE {where_clause}"
             params = [row[f"{col}_src"] for col in self.compare_columns] + [row[col] for col in self.key_columns]
             sql_server_cursor.execute(sql, params)"""
-    def apply_update(self, updates):
+    
+    def apply_update(self, updates: pd.DataFrame):
+        """Cập nhật tất cả các dòng thay đổi"""
         set_clause = ", ".join([f"{col} = ?" for col in self.compare_columns])
         where_clause = " AND ".join([f"{col} = ?" for col in self.key_columns])
         
         sql = f"UPDATE {self.table_name} SET {set_clause} WHERE {where_clause}"
         
-        # Chuyển đổi numpy.int64 sang int Python
-        params = []
-        for col in self.compare_columns:
-            val = updates[f"{col}_src"].iloc[0]
-            params.append(int(val) if hasattr(val, 'item') else val)  # Xử lý numpy.int64
-        
-        for col in self.key_columns:
-            val = updates[col].iloc[0]
-            params.append(int(val) if hasattr(val, 'item') else val)  # Xử lý numpy.int64
-        
-        sql_server_cursor.execute(sql, params)
+        # Duyệt qua TỪNG DÒNG trong DataFrame updates
+        for _, row in updates.iterrows():
+            params = []
+            
+            # Xử lý các cột cần cập nhật
+            for col in self.compare_columns:
+                val = row[f"{col}_src"]
+                # Chuyển đổi numpy types sang Python native types
+                if hasattr(val, 'item'):
+                    val = val.item()
+                elif pd.api.types.is_integer_dtype(type(val)):
+                    val = int(val)
+                elif pd.api.types.is_float_dtype(type(val)):
+                    val = float(val)
+                params.append(val)
+            
+            # Xử lý các key columns cho điều kiện WHERE
+            for col in self.key_columns:
+                val = row[col]
+                if hasattr(val, 'item'):
+                    val = val.item()
+                elif pd.api.types.is_integer_dtype(type(val)):
+                    val = int(val)
+                elif pd.api.types.is_float_dtype(type(val)):
+                    val = float(val)
+                params.append(val)
+            
+            # Thực thi UPDATE cho mỗi dòng
+            sql_server_cursor.execute(sql, params)
 
     def sync(self):
         # Nếu bảng đích trống, chèn toàn bộ

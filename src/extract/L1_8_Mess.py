@@ -128,7 +128,7 @@ mysql_query1="""SELECT DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) AS Ngay,
                 JOIN orders_products op ON op.order_id = o.id
                 WHERE l.utm_source ="mess"
                         and  l.status =1
-                        and DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) >='2025-01-01'
+                        and DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) >= DATE_SUB(NOW(), INTERVAL 24 MONTH)
                 GROUP BY Ngay,Ma_lead,s2.order_id,s2.sale_order_level_id, Ma_khoa_hoc                      
 """
 df1 = transformer.fetch_from_mysql(mysql_query1)
@@ -148,7 +148,7 @@ mysql_query2 = """select date(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) as Thoi_g
                         lp.product_id as Ma_khoa_hoc                  
                     from leads l 
                     join leads_products lp on lp.lead_id=l.id 
-                    where date(DATE_ADD(l.created_at, INTERVAL 7 HOUR))>= '2025-01-01' 
+                    where date(DATE_ADD(l.created_at, INTERVAL 7 HOUR))>= DATE_SUB(NOW(), INTERVAL 24 MONTH)
                       and l.utm_source ="mess"
                       and l.status=1
                     group by Thoi_gian, Ma_lead, Ma_khoa_hoc
@@ -175,7 +175,7 @@ mysql_query3="""SELECT DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) AS Ngay,
                 JOIN orders_products op ON op.order_id = o.id
                 WHERE l.utm_source ="mess"
                         and  l.status =1
-                        and DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) >='2025-01-01'
+                        and DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) >= DATE_SUB(NOW(), INTERVAL 24 MONTH)
                 GROUP BY Ngay,Ma_lead,s2.order_id,s2.sale_order_level_id, Ma_khoa_hoc                      
 """
 df3 = transformer.fetch_from_mysql(mysql_query3)
@@ -201,7 +201,7 @@ mysql_query4="""SELECT DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) AS Ngay,
                 JOIN orders_products op ON op.order_id = o.id
                 WHERE l.utm_source ="mess"
                         and  l.status =1
-                        and DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) >='2025-01-01'
+                        and DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) >= DATE_SUB(NOW(), INTERVAL 24 MONTH)
                 GROUP BY Ngay,Ma_lead,s2.order_id,s2.sale_order_level_id, Ma_khoa_hoc                      
 """
 df4 = transformer.fetch_from_mysql(mysql_query4)

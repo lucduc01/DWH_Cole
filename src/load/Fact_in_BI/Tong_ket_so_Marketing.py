@@ -6,7 +6,7 @@ transformer=DataTransformer()
 #Lấy dữ liệu
 df_source=pd.read_csv("~/DWH_Cole_Project/data_result/Tong_ket_Marketing.csv")
 
-sql_query=""" select * from Fact_Tong_ket_Marketing
+sql_query=""" select * from Fact_Tong_ket_Marketing where Ngay >= DATEADD(MONTH, -4, GETDATE()) 
           """
 df_target=transformer.fetch_from_sql_server(sql_query)
 

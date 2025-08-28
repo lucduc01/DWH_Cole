@@ -1,15 +1,13 @@
 import pandas as pd
-from src.Get_data_DB import DataTransformer
-# Tạo instance của class
-transformer = DataTransformer()
 
-Query_Doanh_thu='select Doanh_thu, Ngay_chuyen_tien as Ngay, Ma_khoa_hoc,Ma_saler,Ma_marketer,Ma_kenh from Fact_Doanh_thu_TOT'
-Query_Doanh_so='select Doanh_so, Ngay_chuyen_tien as Ngay, Ma_khoa_hoc,Ma_saler,Ma_marketer,Ma_kenh from Fact_Doanh_so_TOT'
-Query_Level= 'select L1,L1_L1C, L2,L3,L6,L7,L8,Ngay,Ma_khoa_hoc,Ma_saler,Ma_marketer,Ma_kenh  from Fact_Count_Level_TOT'
+# Lấy dữ liệu
+df_doanh_thu=pd.read_csv("~/DWH_Cole_Project/data_result/Doanh_thu_TOT_transformed.csv")
+df_doanh_so= pd.read_csv("~/DWH_Cole_Project/data_result/Doanh_so_TOT_transformed.csv")
+df_level=pd.read_csv("~/DWH_Cole_Project/data_result/Count_Level_TOT_transformed.csv")
 
-df_doanh_thu=transformer.fetch_from_sql_server(Query_Doanh_thu)
-df_doanh_so= transformer.fetch_from_sql_server(Query_Doanh_so)
-df_level=transformer.fetch_from_sql_server(Query_Level)
+df_doanh_thu=df_doanh_thu.drop(columns=['Id','So_don_hang']).rename(columns={'Ngay_chuyen_tien':'Ngay'})
+df_doanh_so=df_doanh_so.drop(columns=['Id']).rename(columns={'Ngay_chuyen_tien':'Ngay'})
+df_level=df_level.drop(columns=['L1B'])
 
 """ Tính tổng lại doanh thu và doanh số vì ở Fact ban đầu có cột Id nên tạo thành 2 bản ghi riêng biệt mặc dù 
 các chiều dữ liệu đều trùng lặp. Cần sum trước khi join để tránh sinh thừa dữ liệu"""

@@ -9,7 +9,7 @@ transformer = DataTransformer()
 df_src=pd.read_csv('~/DWH_Cole_Project/data_result/Chi_phi_CTV_transformed.csv')
 
 # Lấy dữ liệu từ Dim 
-sql_query = "select * from Fact_Chi_phi_CTV  "
+sql_query = "select * from Fact_Chi_phi_CTV where Thoi_gian >= DATEADD(MONTH, -1, GETDATE())"
 df_des = transformer.fetch_from_sql_server(sql_query)
 
 # Đồng nhất kiểu dữ liệu ngày ở 2 dataframe 

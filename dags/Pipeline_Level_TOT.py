@@ -1,11 +1,14 @@
 from airflow import DAG
 from airflow.operators.bash import BashOperator
 from datetime import datetime
+from pendulum import timezone
+
+local_tz = timezone("Asia/Ho_Chi_Minh")
 
 with DAG(
     dag_id="Level_TOT_etl_pipeline",
-    start_date=datetime(2025, 8, 16),
-    schedule="0 6,12 * * *",
+    start_date=datetime(2025, 8, 16,tzinfo=local_tz),
+    schedule="0 6,12 * * *" ,
     catchup=False
 ) as dag:
     

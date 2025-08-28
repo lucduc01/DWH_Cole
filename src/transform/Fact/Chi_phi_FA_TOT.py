@@ -84,17 +84,17 @@ def read_csv_safe(file_path):
 
 # Đường dẫn file
 
-file_path3 = "~/DWH_Cole_Project/data_tmp/spend_C9_PAUSED.csv"   #Lấy dữ liệu 1 lần duy nhất ở lần chạy đầu tiên
-file_path4 = "~/DWH_Cole_Project/data_tmp/spend_Cole8_PAUSED.csv"
+#file_path3 = "~/DWH_Cole_Project/data_tmp/spend_C9_PAUSED.csv"   #Lấy dữ liệu 1 lần duy nhất ở lần chạy đầu tiên
+#file_path4 = "~/DWH_Cole_Project/data_tmp/spend_Cole8_PAUSED.csv"
 file_path1 = "~/DWH_Cole_Project/data_tmp/spend_C9_ACTIVE.csv"
 file_path2 = "~/DWH_Cole_Project/data_tmp/spend_Cole8_ACTIVE.csv"
 
 # Đọc dữ liệu
 df_cf1 = read_csv_safe(file_path1)
 df_cf2 = read_csv_safe(file_path2)
-df_cf3=pd.read_csv(file_path3)
-df_cf4=pd.read_csv(file_path4)
-df_cf = pd.concat([df_cf1,df_cf2,df_cf3,df_cf4], ignore_index=True)
+#df_cf3=pd.read_csv(file_path3)
+#df_cf4=pd.read_csv(file_path4)
+df_cf = pd.concat([df_cf1,df_cf2], ignore_index=True)
 
 df_cf['Ten_khoa_hoc'] = df_cf['Campaign Name'].str.split('_').str[1]
 df_cf['Ma_marketer'] = df_cf['Campaign Name'].str.split('_').str[2]

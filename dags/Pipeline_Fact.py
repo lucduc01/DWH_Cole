@@ -1,11 +1,14 @@
 from airflow import DAG
 from airflow.operators.bash import BashOperator
 from datetime import datetime
+from pendulum import timezone
+
+local_tz = timezone("Asia/Ho_Chi_Minh")
 
 with DAG(
     dag_id="Fact_etl_pipeline",
-    start_date=datetime(2025, 8, 15),
-    schedule="@weekly",
+    start_date=datetime(2025, 8, 15,tzinfo=local_tz),
+    schedule="0 4 * * *",
     catchup=False
 ) as dag:
 
@@ -78,9 +81,8 @@ with DAG(
     # Fact Chi phí CTV
     extract_Chi_phi_CTV=BashOperator(task_id="extract_Chi_phi_CTV", bash_command="python ~/DWH_Cole_Project/src/extract/Fact/Chi_phi_CTV.py")
     transform_Chi_phi_CTV=BashOperator(task_id="transform_Chi_phi_CTV", bash_command="python ~/DWH_Cole_Project/src/transform/Fact/Chi_phi_CTV.py")
-    load_Chi_phi_CTV=BashOperator(task_id="load_Chi_phi_CTV", bash_command=("python ~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py",
-                                                                            ">> /home/duclu/DWH_Cole_Project/log_error.text 2>&1"
-        "|| (echo '[`date`] ❌ Lỗi khi chạy load_Chi_phi_CTV' >> /home/duclu/DWH_Cole_Project/log_error.text; exit 1)"))
+    load_Chi_phi_CTV=BashOperator(task_id="load_Chi_phi_CTV", bash_command="python ~/DWH_Cole_Project/src/load/Fact/Chi_phi_CTV.py")
+                                                                           
  
     # Fact Kế hoạch Marketing
     extract_Ke_hoach_Marketing=BashOperator(task_id="extract_Ke_hoach_Marketing", bash_command="python ~/DWH_Cole_Project/src/extract/Fact/Ke_hoach_Marketing.py")
@@ -93,6 +95,10 @@ with DAG(
     transform_Ke_hoach_Sale=BashOperator(task_id="transform_Ke_hoach_Sale", bash_command="python ~/DWH_Cole_Project/src/transform/Fact/Ke_hoach_Sale.py")
     load_Ke_hoach_Sale_TOA=BashOperator(task_id="load_Ke_hoach_Sale_TOA", bash_command="python ~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOA.py")
     load_Ke_hoach_Sale_TOT=BashOperator(task_id="load_Ke_hoach_Sale_TOT", bash_command="python ~/DWH_Cole_Project/src/load/Fact/Ke_hoach_Sale_TOT.py")
+
+    # Fact Tổng kết Marketing
+    transform_Tong_ket_Marketing=BashOperator(task_id="transform_Tong_ket_Marketing", bash_command="python ~/DWH_Cole_Project/src/transform/Fact_in_BI/Tong_ket_so_Marketing.py")
+    load_Tong_ket_Marketing=BashOperator(task_id="load_Tong_ket_Marketing", bash_command="python ~/DWH_Cole_Project/src/load/Fact_in_BI/Tong_ket_so_Marketing.py")
 
     # Chạy nối tiếp từng nhóm
     # --- Các flow tuyến tính ---
@@ -152,3 +158,7 @@ with DAG(
     transform_Ke_hoach_Sale >> load_Ke_hoach_Sale_TOA
     transform_Ke_hoach_Sale >> load_Ke_hoach_Sale_TOT
     
+    # Flow Tổng kết Marketing
+    transform_Doanh_thu_TOT >> transform_Tong_ket_Marketing
+    transform_Doanh_so_TOT >> transform_Tong_ket_Marketing
+    transform_Tong_ket_Marketing >> load_Tong_ket_Marketing

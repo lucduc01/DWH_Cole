@@ -6,7 +6,7 @@ transformer=DataTransformer()
 #Lấy dữ liệu
 df_source=pd.read_csv("~/DWH_Cole_Project/data_result/L78_FA_transformed.csv")
 
-sql_query=""" select * from Fact_L7_8_FA_TOT
+sql_query=""" select * from Fact_L7_8_FA_TOT where Thoi_gian >= DATEADD(MONTH, -5, GETDATE())
           """
 
 # Đồng nhất kiểu dữ liệu ngày ở 2 dataframe 
