@@ -110,10 +110,10 @@ df_others = df_Mess[~df_Mess['Ma_khoa_hoc'].isin([515, 550])]
 if not df_to_process.empty:
     def xu_ly_nhom(gr):
         if len(gr) == 2:
-            na_mask = gr['L1'].isna()
-            if na_mask.sum() == 1:
-                return gr[~na_mask]
-            elif na_mask.sum() == 2:
+            zero_mask = gr['L1'] == 0
+            if zero_mask.sum() == 1:
+                return gr[~zero_mask]
+            elif zero_mask.sum() == 2:
                 if (gr['Ma_khoa_hoc'] == 515).any():
                     return gr[gr['Ma_khoa_hoc'] == 515]
                 else:
@@ -121,7 +121,7 @@ if not df_to_process.empty:
             else:
                 return gr
         else:
-            return gr[~gr['L1'].isna()] if gr['L1'].isna().any() else gr
+            return gr[gr['L1'] != 0] if (gr['L1'] == 0).any() else gr
 
     df_processed = (
         df_to_process
