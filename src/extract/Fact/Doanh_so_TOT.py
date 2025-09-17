@@ -5,9 +5,9 @@ transformer = DataTransformer()
 # Lấy dữ liệu lần đầu từ năm 2024 Mysql
 mysql_query = """SELECT 
                       tp.id AS Id,
-                      s.money AS Doanh_so,
+                      o.final_price AS Doanh_so,
                       DATE_ADD(t.payment_at, INTERVAL 7 HOUR) AS Ngay_chuyen_tien,
-                      s.email as Khach_hang,
+                      o.email as Khach_hang,
                       p.id AS Ma_khoa_hoc,
                       o.current_sale_id AS Ma_saler,
                       l.utm_medium AS Ma_marketer,
@@ -16,7 +16,6 @@ mysql_query = """SELECT
     JOIN transactions_products tp ON tp.p_transaction_id = t.id
     JOIN products p ON tp.product_id = p.id
     JOIN orders o ON t.order_id = o.id
-    join students s on s.order_id=o.id
     JOIN leads l ON o.lead_id = l.id
     join users u on o.current_sale_id=u.id
     WHERE t.t_status = 1
