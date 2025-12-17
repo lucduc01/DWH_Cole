@@ -3,7 +3,7 @@ from datetime import datetime
 # Tạo instance của class
 transformer = DataTransformer()
 
-# Lấy dữ liệu lần đầu từ năm 2024 Mysql DATE_SUB(NOW(), INTERVAL 3 MONTH)
+# Lấy dữ liệu lần đầu từ năm 2024-01-01 đến hiện tại
 mysql_query = f"""
     SELECT 
         tp.id AS Id,
@@ -28,3 +28,4 @@ mysql_query = f"""
 
 df = transformer.fetch_from_mysql(mysql_query)
 df.to_csv("~/DWH_Cole_Project/data_tmp/Doanh_thu_TOT.csv", index=False)
+

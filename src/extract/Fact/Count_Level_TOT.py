@@ -2,7 +2,7 @@ from src.Get_data_DB import DataTransformer
 # Tạo instance của class
 transformer = DataTransformer()
 
-# Lấy dữ liệu lần đầu từ năm 2024 Mysql  DATE_SUB(NOW(), INTERVAL 3 MONTH)
+# Lấy dữ liệu lần đầu từ năm 2024 Mysql  
 mysql_query = """SELECT DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) AS Ngay,                                               
                         l.source AS Ma_kenh, 
                         l.utm_medium AS Ma_marketer,

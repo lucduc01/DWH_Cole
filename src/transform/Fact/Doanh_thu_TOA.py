@@ -20,7 +20,7 @@ mask_combo = df['Ten_san_pham_lower'].str.contains('combo', na=False)
 # Tách DataFrame
 df_combo = df[mask_combo].copy()
 df_khong_combo = df[~mask_combo].copy()
-
+C
 # (Tùy chọn) Xoá cột tạm nếu không cần
 df_combo.drop(columns='Ten_san_pham_lower', inplace=True)
 df_khong_combo.drop(columns='Ten_san_pham_lower', inplace=True)

@@ -2,7 +2,7 @@ from src.Get_data_DB import DataTransformer
 # Tạo instance của class
 transformer = DataTransformer()
 
-# Lấy dữ liệu lần đầu từ năm 2024 Mysql  DATE_SUB(NOW(), INTERVAL 3 MONTH)
+# Lấy dữ liệu lần đầu từ năm 2024 
 mysql_query = """SELECT DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) AS Thoi_gian,                                               
                         lp.product_id AS Ma_khoa_hoc,
                         COUNT(DISTINCT CASE WHEN s2.sale_order_level_id = 1 THEN l.id END) AS L1,

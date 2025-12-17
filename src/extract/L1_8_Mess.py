@@ -44,16 +44,18 @@ def read_public_google_sheet(sheet_url):
 # --- Cách sử dụng ---
 # Thay thế URL này bằng URL Google Sheet của bạn
 # Đảm bảo Sheet của bạn đã được chia sẻ ở chế độ "Anyone with the link can view"
-google_sheet_link = os.getenv("Sheet_L1_mess") # THAY THẾ BẰNG LINK CỦA BẠN
+google_sheet_link = os.getenv("Sheet_L1_mess") 
 
-query_Id_Lead_Mess= """select l.id as Id_leads,
-                              l.name as Contact,
-                              l.mobile  as SDT,
-                              p.code as San_pham
-                        from leads l
-                        join leads_products lp on lp.lead_id =l.id
-                        join products p on lp.product_id=p.id
-                        where DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR))>='2025-01-01' and l.utm_source ='mess'  """
+query_Id_Lead_Mess= """
+select l.id as Id_leads,
+       l.name as Contact,
+       l.mobile  as SDT,
+       p.code as San_pham
+from leads l
+join leads_products lp on lp.lead_id =l.id
+join products p on lp.product_id=p.id
+where DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR))>='2025-01-01' 
+    and l.utm_source ='mess'   """
 
 df_leads=transformer.fetch_from_mysql(query_Id_Lead_Mess)
 df_master_data = read_public_google_sheet(google_sheet_link)
@@ -115,7 +117,7 @@ result = df_merged.loc[df_merged.groupby('SĐT')['Ma_lead'].idxmin()]
 result=result[['Ngày','Ma_lead']]
 
 #-----Lấy dữ liệu số L1, L1-L1.C, L7,L8 tương tự như FA nhưng chuyển số liệu ngày về khớp trong Sheet
-# Lấy thông tin của L1
+# Lấy thông tin của L1.C
 mysql_query1="""SELECT DATE(DATE_ADD(l.created_at, INTERVAL 7 HOUR)) AS Ngay,
                                  l.id as Ma_lead,
                                  s2.order_id,

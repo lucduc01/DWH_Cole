@@ -7,8 +7,9 @@ Offline_class_query = """ select Ma_lop_hoc,
                                  So_buoi_tuyen_sinh
                           from Dim_Lop_hoc
 """
-# Có 2 cách tiếp cận phân nhánh lớp thuộc khoá học. Cách 1: Lớp thuộc nhiều sản phẩm ( sản phẩm lẻ và sản phẩm combo). 
-# Cách 2: Lớp thuộc về 1 sản phẩm suy nhất . Trong Dim đang tổ chức theo cách hai nhưng từ Tên khoá học của Chiến dịch Meta muốn 
+# Có 2 cách tiếp cận phân nhánh lớp thuộc khoá học. 
+# Cách 1: Lớp thuộc nhiều sản phẩm ( sản phẩm lẻ và sản phẩm combo). 
+# Cách 2: Lớp thuộc về 1 sản phẩm suy nhất . Trong Dim đang tổ chức theo cách 2 nhưng từ Tên khoá học của Chiến dịch Meta muốn 
 # về lớp thì phải dùng Cách 1
 Mapping_class_query="""select oc.id Ma_lop_hoc,
                                p.id Ma_khoa_hoc
@@ -23,7 +24,7 @@ df_78=pd.read_csv("~/DWH_Cole_Project/data_result/L78_FA_transformed.csv")
 # Gộp lại dữ liệu L7, L8 vào dữ liệu gốc
 df=df.merge(df_78, on=['Thoi_gian','Ma_khoa_hoc','Ma_marketer'],how='outer')
 
-# Join để bảng ánh xa Lớp thuộc những sản phẩm nào ( 1 Lớp sẽ thuộc nhiều sản phẩm, đặc biệt sản phẩm bán có COMBO)
+# Join để bảng ánh xa Lớp thuộc những sản phẩm nào (1 Lớp sẽ thuộc nhiều sản phẩm, đặc biệt sản phẩm bán có COMBO)
 df_LH=df_LH.merge(df_mapping, on='Ma_lop_hoc', how='inner')
 df['Thoi_gian'] = pd.to_datetime(df['Thoi_gian'])
 df_LH['Ngay_khai_giang'] = pd.to_datetime(df_LH['Ngay_khai_giang'])

@@ -1,4 +1,7 @@
 .env
 data_result
 data_tmp
+test1.ipynb
 
+__pycache__/
+*.pyc

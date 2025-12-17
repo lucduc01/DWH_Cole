@@ -112,7 +112,7 @@ with DAG(
     extract_L7_8_TOA >> transform_L7_8_TOA >> load_L7_8_TOA
 
     # --- Flow FA ---
-    extract_L1_8_FA >> extract_Chi_phi_FA_TOT >> transform_Chi_phi_FA_TOT
+    [extract_L1_8_FA, extract_Chi_phi_FA_TOT] >> transform_Chi_phi_FA_TOT
 
     transform_Chi_phi_FA_TOT >> transform_Chi_phi_Mess_TOT
     transform_Chi_phi_FA_TOT >> transform_Chi_phi_FA_TOA
@@ -123,7 +123,7 @@ with DAG(
     transform_Chi_phi_FA_TOA >> load_L7_8_FA_TOA
 
     # --- Flow Mess ---
-    extract_L1_8_Mess >> transform_L1_8_Mess >> extract_Chi_phi_Mess_TOT >> transform_Chi_phi_Mess_TOT
+    [extract_L1_8_Mess >> transform_L1_8_Mess, extract_Chi_phi_Mess_TOT] >> transform_Chi_phi_Mess_TOT
     transform_Chi_phi_Mess_TOT >> load_Chi_phi_Mess_TOT
     transform_Chi_phi_Mess_TOT >> load_L7_8_Mess_TOT
     transform_Chi_phi_Mess_TOT >> transform_Chi_phi_Mess_TOA
@@ -143,4 +143,10 @@ with DAG(
     # Flow Kế hoạch Marketing
     extract_Ke_hoach_Marketing >> transform_Ke_hoach_Marketing
     transform_Ke_hoach_Marketing >> load_Ke_hoach_Marketing_Thang
-    transform_Ke_hoach_Marketing
+    transform_Ke_hoach_Marketing >> load_Ke_hoach_Marketing_Tuan
+
+    # Flow Kế hoạch Sale
+    extract_Ke_hoach_Sale >> transform_Ke_hoach_Sale
+    transform_Ke_hoach_Sale >> load_Ke_hoach_Sale_TOT
+    transform_Ke_hoach_Sale >> load_Ke_hoach_Sale_TOA
+
